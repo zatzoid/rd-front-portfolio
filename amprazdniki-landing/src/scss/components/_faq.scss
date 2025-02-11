@@ -1,0 +1,152 @@
+.faq {
+    overflow: hidden;
+    background: #fff;
+  @include desktop{
+    margin-bottom: 10rem;
+  }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 15rem;
+
+        @include mobile {
+            grid-template-columns: 100%;
+            gap: 0;
+
+        }
+    }
+
+    &--title {
+        margin-bottom: 5rem;
+        text-transform: uppercase;
+
+        @include mobile {
+            text-align: center;
+        }
+    }
+
+    &-item {
+        padding: 3.2rem 0;
+        border-bottom: 0.2rem solid rgba(41, 41, 41, 0.3);
+        display: grid;
+        grid-template-rows: min-content 0fr;
+        transition: grid .5s;
+
+        &._opened {
+            grid-template-rows: min-content 1fr;
+
+            & .faq-item--top svg {
+                transform: rotate(180deg);
+            }
+        }
+
+        &--top {
+            display: flex;
+            justify-content: space-between;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-bottom: 2.4rem;
+
+
+
+            svg {
+                flex-shrink: 0;
+                transition: transform 0.5s ease-in-out;
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+
+        &--bottom {
+            overflow: hidden;
+            height: 100%;
+
+            width: 64.1rem;
+        }
+    }
+
+
+
+
+    &--img {
+        width: auto;
+        height: 100rem;
+        margin-bottom: 4rem;
+        overflow: hidden;
+        display: flex;
+
+        @include mobile {
+            height: 40rem;
+        }
+
+        & img {
+            object-fit: cover;
+            @include mobile{
+                object-position:  0 33%;
+            }
+        }
+
+
+
+    }
+
+    @include mobile {
+
+        &--left {
+            width: auto;
+            margin-bottom: 9.6rem;
+        }
+
+        &--title {
+            margin-bottom: 1.6rem;
+            text-align: center;
+        }
+
+        &-item {
+            padding: 3.2rem 0;
+
+
+            &--top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 6rem;
+
+                span {
+                    font-size: 3rem;
+                    
+                }
+
+                svg {
+                    transition: transform 0.5s ease-in-out;
+                    width: 6rem;
+                    height: 6rem;
+                }
+            }
+
+            &--bottom {
+font-size: 2.8rem;
+                width: auto;
+            }
+        }
+
+        &--right {
+            width: fit-content;
+            display: flex;
+            gap: 3rem;
+            align-items: flex-end;
+        }
+
+        &--min-text {
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            margin-bottom: 9.6rem;
+        }
+
+
+
+    }
+}

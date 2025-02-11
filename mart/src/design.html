@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>само напишется</title>
+
+  <link rel="preload" href="./assets/fonts/Circe.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./assets/fonts/Forum.woff2" as="font" type="font/woff2" crossorigin="">
+  <style>
+    @font-face {
+        font-family: 'Circe';
+        src: local('Circe'),
+        url('./assets/fonts/Circe.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+
+    @font-face {
+        font-family: 'Forum';
+        src: local('Forum'),
+        url('./assets/fonts/Forum.woff2') format('woff2');
+
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+</style>
+</head>
+
+
+<body>
+    <div class="wrapper  main-swiper swiper">
+        <include src="./components/_header.html"></include>
+        <main class="swiper-wrapper">
+            <!--  -->
+            <section class="design-heading" data-anime-header="0">
+                <div class="ui-bg anime-height-bottom" >
+                    <img src="./assets/images/design.png" alt="">
+                </div>
+                <div class="ui-line anime-width-right" data-anime-delay="1s" data-anime-speed="1s"></div>
+                <div class="container design-heading__c col-wh">
+                    <button class="btn-primary" data-modal="request" >
+                        <span class="btn-primary-anchor">
+                            <span class="btn-primary-c">
+                                <span class="btn-primary-text col-wh anime-height-bottom" data-anime-trigger="2"
+                                    data-anime-delay="1s">
+                                    оставить <br />
+                                    заявку
+                                </span>
+                                <span class="ui-icon anime-height-top _arrow-white-right" data-anime-trigger="2" data-anime-delay="1s">
+                                   
+
+                                </span>
+                            </span>
+                            <span class="btn-primary-circle anime-height-bottom" data-anime-trigger="2"
+                                data-anime-delay="1s"></span>
+                        </span>
+                    </button>
+                    <div class="tl1 txt-up anime-translate-top" >
+                        <h1 class="anime-translate-t" data-anime-delay="1s">
+                            дизайн <br />
+                            интерьера
+                        </h1>
+                    </div>
+                    <div class="txt22 txt-up anime-translate-top" >
+                        <p class="anime-translate-t" data-anime-delay="1s">
+                            МЫ ПРИДУМАЕМ <br />
+                            ДЛЯ ВАС МЕЧТУ И СОЗДАДИМ <br />
+                            ЕЕ В ТОЧНОСТИ
+                        </p>
+                    </div>
+                    <div class="txt20 anime-translate-bottom" >
+                        <p class="anime-translate-t" data-anime-delay="1s">
+                            Дизайн-проект интерьера – это альбом <br />
+                            с полностью продуманным интерьером, который состоит из фотореалистичных изображений <br />
+                            с выбранной мебелью, отделками, цветами <br />
+                            и чертежами для строителей, с помощью которых воплощаются задумки дизайнера
+                        </p>
+                    </div>
+                    <ul class="design-heading__c-price  anime-translate-bottom" >
+                        <li class="design-heading__c-price-el txt14 anime-translate-t" data-anime-delay="1s">
+                            <span class="txt-up">обЪекты</span>
+                            <span> от 100 м <sup>2</sup></span>
+                        </li>
+                        <li class="design-heading__c-price-el txt14  anime-translate-t" data-anime-delay="1s">
+                            <span class="txt-up">цена</span>
+                            <span> 12 000 &#8381; / м<sup>2</sup></span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!--  -->
+            <section class="design-stages">
+                <ul class="container design-stages__c">
+                    <li class="design-stages__c-el _ttl">
+                        <p class="txt14 txt-up anime-height-bottom">индивидуальный <br /> подход на каждом шаге</p>
+                        <p class="tl1  anime-height-bottom">
+                            Этапы работы <br />
+                            над дизайн-проектом
+                        </p>
+                    </li>
+                    <li class="design-stages__c-el">
+                        <div class="design-stages__c-el-count">
+                            <span class="ui-count anime-height-top">1</span>
+                            <div class="tl3 txt-up anime-translate-bottom">
+                                <p class="anime-translate-t">техническое задание</p>
+                            </div>
+                        </div>
+                        <div class=" design-stages__c-el-text txt22 ">
+                            <div class="anime-translate-top">
+                                <p class="anime-translate-t">some text</p>
+                            </div>
+                            <a class="design-stages__c-el-download txt14 txt-up anime-height-top"> download
+
+                            </a>
+                        </div>
+                        <div class="ui-line _black anime-width-right" data-anime-delay="1s"></div>
+                    </li>
+                    <li class="design-stages__c-el">
+                        <div class="design-stages__c-el-count">
+                            <span class="ui-count anime-height-top">2</span>
+                            <div class="tl3 txt-up anime-translate-bottom">
+                                <p class="anime-translate-t">техническое задание</p>
+                            </div>
+                        </div>
+                        <div class=" design-stages__c-el-text txt22 ">
+                            <div class="anime-translate-top">
+                                <p class="anime-translate-t">some text</p>
+                            </div>
+                            <a class="design-stages__c-el-download txt14 txt-up anime-height-top"> download</a>
+                        </div>
+                        <div class="ui-line _black anime-width-right" data-anime-delay="1s"></div>
+                    </li>
+                </ul>
+            </section>
+            <!--  -->
+            <include src="./components/_video.html"></include>
+            <!--  -->
+            <include src="./components/_message.html"></include>
+            <!--  -->
+            <section class="banner _design">
+                <div class="container banner__c">
+                    <div class="ui-line _black anime-width-right" data-anime-delay="1s"></div>
+                    <div class="banner__c-left">
+                        <div class="banner__c-img anime-height-top" >
+                            <img src="./assets/images/smelost.png" alt="">
+                        </div>
+                    </div>
+                    <div class="banner__c-body">
+                        <div class="txt14 txt-up anime-translate-top" >
+                            <p class="anime-translate-t">
+                                Мы создаем вашу мечту,
+                                <br />
+                                опережая ваши желания
+                            </p>
+                        </div>
+                        <div class=" tl1 txt-up" >
+                            <div class="anime-translate-top">
+                                <p class="anime-translate-t" data-anime-delay="1s">Смелость</p>
+                            </div>
+                            <div class="anime-translate-top">
+                                <p class="anime-translate-t" data-anime-delay="2s">эстетичность</p>
+                            </div>
+                            <div class="anime-translate-top">
+                                <p class="anime-translate-t" data-anime-delay="3s">эргономичность</p>
+                            </div>
+                        </div>
+                        <div class="tl3 txt-up anime-translate-bottom">
+                            <p class="anime-translate-t">
+                                три главные <br />
+                                составляющие <br />
+                                нашей работы
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <include src="./components/_two-slider.html"></include>
+            <!--  -->
+            <include src="./components/_faq.html"></include>
+            <!--  -->
+            <include src="./components/_our-services.html"></include>
+            <!--  -->
+            <include src="./components/_request-form.html"></include>
+            <!--  -->
+        </main>
+        <include src="./components/_footer.html"></include>
+    </div>
+
+
+</body>
+
+</html>

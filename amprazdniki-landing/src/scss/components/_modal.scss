@@ -1,0 +1,75 @@
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+
+	&._opened {
+		& .modal__c {
+			transform: translateX(0);
+		}
+	}
+
+	&-wrp {
+		background-color: rgba(221, 119, 119, 0.2);
+		backdrop-filter: blur(1rem);
+		display: block;
+		
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__c {
+		background-color: $white;
+		position: relative;
+		padding: 5.7rem 0;
+		margin: 3rem;
+		max-width: 80rem;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		transform: translateX(100%);
+		transition: transform .5s ease-in-out;
+		align-items: center;
+		gap: 7rem;
+
+	}
+
+	&__closer {
+		position: absolute;
+		top: 3rem;
+		right: 3rem;
+		background-image: url(./assets/images/icons/x.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 2.4rem;
+		width: 3rem;
+		height: 3rem;
+	}
+
+}
+.modal-request{
+	&__form{
+		
+		padding-bottom: 7rem;
+		min-width: 40rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		& label{
+			width: 44rem;
+		}
+		@include mobile{
+			padding-bottom: 14rem;
+		}
+		&-submit{
+			
+			margin-top: 6rem;
+
+		}
+	}
+}

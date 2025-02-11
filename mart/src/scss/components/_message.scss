@@ -1,0 +1,227 @@
+.message {
+    position: relative;
+
+    @include mobile {
+        padding-top: $sectionGapMobile;
+        &.core-slide-active {
+            &[data-anime-state='1'] {
+
+                & .message__c {
+                    grid-template-rows: min-content 12rem 17rem min-content 0rem;
+
+                }
+            }
+
+            &[data-anime-state='2'] {
+
+                & .message__c {
+                    grid-template-rows: min-content 0rem 0rem min-content 50rem;
+
+                    & .message__c-text-top {
+                        opacity: 1;
+                    }
+
+                    & .btn-second {
+                        & .anime-height-top {
+                            clip-path: inset(100% 0 0% 0) !important;
+                            animation: height-top-rev 1s ease-in-out;
+                            animation-duration: .5s !important;
+                            animation-delay: 0s !important;
+                        }
+
+                        & .anime-height-bottom {
+                            clip-path: inset(0% 0 100% 0) !important;
+                            animation: height-bottom-rev 1s ease-in-out;
+                            animation-duration: .5s !important;
+                            animation-delay: 0s !important;
+                        }
+
+                    }
+                }
+            }
+
+            &[data-anime-state='3'] {
+
+                & .message__c {
+                    grid-template-rows: min-content 0rem 0rem min-content 50rem;
+
+                    & .message__c-text-top {
+                        transform: translateY(-100%);
+                        opacity: 0;
+                    }
+
+                    & .message__c-text-bottom {
+                        transform: translateY(-100%);
+                        opacity: 1;
+                    }
+
+                    & .btn-second {
+                        & .anime-height-top {
+
+                            animation: height-top 1s ease-in-out forwards;
+                        }
+
+                        & .anime-height-bottom {
+
+                            animation: height-bottom 1s ease-in-out forwards;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+
+    }
+
+    &__c {
+        display: grid;
+        grid-template-columns: .5fr 1fr 1fr .5fr;
+        gap: 3rem 4.4rem;
+        grid-template-areas:
+            'btn heading heading heading'
+            '. exp mission .'
+            'small big text .'
+            'small big text btn-small';
+        position: relative;
+
+        @include desktop{
+           /*  grid-template-rows:  min-content 5rem auto 4rem; */
+            grid-template-rows:  min-content min-content minmax(40dvh, 40rem) 4rem;
+           
+
+        }
+
+        @include mobile {
+         
+            padding-top: 8dvh;
+            box-sizing: border-box;
+            grid-auto-rows: auto;
+            transition: grid .5s ease-in-out;
+            gap: 0 3.2rem;
+            grid-template-rows: min-content 12rem 17rem min-content 0rem;
+            grid-template-columns: .5fr 1fr;
+            grid-template-areas:
+                'heading heading'
+                'exp exp'
+                'mission mission'
+                'small big'
+                'text text'
+                'btn-small btn-small';
+                &>*+*{
+                    margin-top: 1.8rem;
+                }
+        }
+
+        & .ui-line {
+            position: absolute;
+            top: 11%;
+            left: 0;
+
+            @include mobile {
+                top: 26rem;
+            }
+        }
+
+        &-heading {
+            grid-area: heading;
+            @include mobile{
+                margin-bottom: 3rem;
+            }
+
+        }
+
+        & .btn-primary {
+            grid-area: btn;
+            width: fit-content;
+            transform: translate(11rem, 11rem);
+
+            @include mobile {
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translate(-21rem, 14rem);
+            }
+        }
+
+        &-exp {
+            grid-area: exp;
+            overflow: hidden;
+
+            @include mobile {
+                display: flex;
+                align-items: center
+            }
+
+            ;
+        }
+
+        &-mission {
+            grid-area: mission;
+            overflow: hidden;
+        }
+
+        &-small {
+            grid-area: small;
+            display: flex;
+
+            & img {
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &-big {
+            grid-area: big;
+            display: flex;
+
+            & img {
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &-text {
+            grid-area: text;
+            display: flex;
+            flex-direction: column;
+            gap: 3.2rem;
+            overflow: hidden;
+
+            @include mobile {
+                height: 100%;
+                display: grid;
+                grid-template-rows: 100% 100%;
+                grid-template-columns: 100%;
+
+                &-top {
+                    opacity: 0;
+                    transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+                }
+
+                &-bottom {
+                    opacity: 0;
+                    transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+
+                }
+
+            }
+
+        }
+
+        & .btn-second {
+            @include mobile {
+                margin-top: 5rem;
+            }
+        }
+
+        &-btn-small {
+
+            grid-area: btn-small;
+            align-self: flex-end;
+
+
+        }
+    }
+}

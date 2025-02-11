@@ -1,0 +1,223 @@
+.banner {
+    position: relative;
+
+    &__c {
+        position: relative;
+        height: 70rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: '. body';
+        gap: 4.4rem;
+
+        @include mobile {
+            grid-template-columns: 100%;
+            grid-template-rows: 64rem auto;
+            grid-template-areas:
+                'left'
+                'body';
+            height: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &-body {
+            grid-area: body;
+
+            @include mobile {
+                padding-right: $mobilePadding;
+                padding-left: $mobilePadding;
+
+            }
+        }
+
+        &-left {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            @include mobile {
+                grid-area: left;
+            }
+        }
+
+        &-img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            width: 50vw;
+            height: 100%;
+
+            @include mobile {
+                position: relative;
+                width: auto;
+            }
+
+            & img {
+                object-position: right;
+                object-fit: cover;
+            }
+
+        }
+    }
+
+    &._design {
+        & .ui-line {
+            top: 47rem;
+        }
+
+        & .banner__c-body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 10.8rem;
+            padding-bottom: 10.8rem;
+
+            @include mobile {
+                padding-top: 5rem;
+                padding-bottom: 5rem;
+                gap: 3rem;
+
+            }
+
+        }
+    }
+
+    &._complects {
+        & .banner__c {
+            @include mobile {
+                grid-template-rows: 50rem auto;
+                gap: 0;
+            }
+        }
+        &._rev {
+            & .ui-line{
+                bottom: -5rem;
+            }
+        }
+
+        & .ui-line {
+            bottom: 33%;
+
+            @include mobile {
+                bottom: 27rem;
+
+            }
+        }
+
+        & .banner__c-body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-top: 4.4rem;
+            padding-bottom: 4.4rem;
+
+            @include mobile {
+                gap: 5rem;
+            }
+
+            & .txt22 {
+                display: flex;
+                gap: 2.4rem;
+                margin-top: 8rem;
+
+                @include mobile {
+                    margin-top: 0;
+                }
+
+                & * {
+                    height: fit-content;
+                }
+            }
+
+            &-footer {
+                margin-top: auto;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 5rem 20rem;
+
+                @include mobile {
+                    grid-template-columns: 100%;
+                }
+
+                
+            }
+
+        }
+    }
+    &._price {
+        @include desktop {
+            & .banner__c-body-footer {
+
+                &>.txt16 {
+                    grid-column: 1;
+                }
+
+                & .btn-primary {
+                    grid-column: 2;
+                }
+
+                gap: 2.4rem;
+                margin-bottom: 6rem;
+
+                & .btn-primary {
+                    transform: translate(23rem, -3rem);
+                }
+            }
+
+            & .ui-line {
+                bottom: 8%;
+            }
+        }
+        @include mobile{
+            padding-top: 0;
+
+            & .banner__c-body-footer {
+                & .btn-primary {
+                    transform: translate(51rem, -4rem);
+                }
+                &>.txt16 {
+                   max-width: 48%;
+                }
+                &>.txt16:first-of-type {
+                    max-width: 100%;
+                 }
+            }
+           
+        }
+    }
+    &._rev {
+        & .banner__c {
+
+            @include desktop {
+                grid-template-areas: 'body .';
+
+                & .banner__c-img {
+                    left: 0;
+                    right: unset;
+                }
+
+                & .ui-line {
+                    bottom: 4%;
+                }
+
+                & .btn-primary {
+                    transform: translate(0, 5rem);
+                }
+            }
+
+            @include mobile {
+                & .banner__c-body-footer {
+                    width: 50%;
+                }
+
+                & .btn-primary {
+                    transform: translate(53rem, 0rem);
+                }
+            }
+
+
+        }
+    }
+}

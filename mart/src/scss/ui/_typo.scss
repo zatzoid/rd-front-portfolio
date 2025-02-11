@@ -1,0 +1,120 @@
+.tl1 {
+  //styleName: desktop/h1 forum 2%;
+  font-family: Forum;
+  font-size: 7.2rem;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.04em;
+
+  @include mobile {
+    font-size: 6.3rem;
+  }
+
+}
+
+
+.tl2 {
+  //styleName: desktop/h2 forum 28 4%;
+  font-family: Forum;
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.04em;
+
+  @include mobile {
+    font-size: 4rem;
+  }
+
+}
+
+
+
+
+.tl3 {
+  //styleName: desktop/h3 forum 22 4%;
+  font-family: Forum;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.04em;
+
+  @include mobile {
+    font-size: 3.2rem;
+  }
+}
+
+.txt22 {
+  //styleName: desktop/subtitle circe 4%;
+  font-family: Circe;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: 0.04em;
+
+  @include mobile {
+    font-size: 3.2rem;
+  }
+}
+
+.txt20 {
+  //styleName: desktop/text circe 0%;
+  font-family: Circe;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 120%;
+
+  @include mobile {
+    font-size: 3.2rem;
+    &._14{
+      font-size: 2.8rem;
+    }
+  }
+}
+
+.txt16 {
+  //styleName: desktop/text sm circe 0%;
+  font-family: Circe;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 110%;
+
+  @include mobile {
+    font-size: 2.8rem;
+  }
+}
+
+.txt14 {
+  //styleName: desktop/label circe 12%;
+  font-family: Circe;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.12em;
+
+  @include mobile {
+    font-size: 2.6rem;
+  }
+
+}
+
+.txt14-10 {
+  //styleName: desktop/label circe 12%;
+  font-family: Circe;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.12em;
+
+  @include mobile {
+    font-size: 2rem;
+  }
+
+}
+.txt{
+  &-up{
+    text-transform: uppercase;
+  }
+  &-center{
+    text-align: center;
+  }
+}

@@ -1,0 +1,132 @@
+.btn-primary {
+    /*  border: 3px solid $red-dark; */
+    width: fit-content;
+    border-radius: 3rem;
+    padding: 0 3.2rem;
+    padding-right: 0;
+    box-sizing: border-box;
+    position: relative;
+   
+    display: inline-flex;
+    align-items: center;
+    gap: 3.2rem;
+    height: 6rem;
+    overflow: hidden;
+    font-family: IBM Plex Sans;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 120%;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: $red-dark;
+    transition: background-color .2s linear, color .2s linear;
+    -webkit-box-shadow: 0px 0px 0px 3px $red-dark inset;
+    -moz-box-shadow: 0px 0px 0px 3px $red-dark inset;
+    box-shadow: 0px 0px 0px 3px $red-dark inset;
+
+    @include hover {
+      
+        color: $white;
+        &::after{
+            width: 100%;
+        }
+    }
+
+    @include mobile {
+        padding-left: 10.8rem;
+        gap: 5rem;
+        height: 11rem;
+        font-size: 3.6rem;
+        border-radius: 6rem;
+    }
+    &::after{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        background-color: $red-dark;
+        content: '';
+        width: 0%;
+        height: 100%;
+        z-index: 1;
+        transition: width .2s linear;
+    }
+    &-text{
+        position: relative;
+        z-index: 3;
+    }
+
+    &-arrow {
+        display: block;
+        width: 3rem;
+        height: 100%;
+        background-color: $red-dark;
+        position: relative;
+        z-index: 3;
+        background-image: url(../assets/images/icons/arrow-small-right.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include mobile {
+            width: 6rem;
+        }
+
+        &::after {
+            position: absolute;
+            z-index: 2;
+            content: '';
+            left: -1.9rem;
+            top: 0;
+            height: 100%;
+            width: 200%;
+            background-color: $red-dark;
+            -webkit-mask-image: radial-gradient(circle, transparent 2.9rem, $red-dark 3rem);
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: -4rem 0;
+            mask-image: radial-gradient(circle, transparent 2.9rem, $red-dark 3rem);
+            mask-repeat: no-repeat;
+            mask-position: -4rem 0;
+
+            @include mobile {
+                left: -4rem;
+                -webkit-mask-image: radial-gradient(circle, transparent 5rem, $red-dark 5.1rem);
+                -webkit-mask-position: -8rem 0;
+                mask-image: radial-gradient(circle, transparent 5rem, $red-dark 5.1rem);
+                mask-position: -7.3rem 0;
+            }
+        }
+
+
+    }
+
+}
+
+.btn-link-overlay:hover {
+
+    & .btn-link,
+    &.btn-link {
+        /* somthing to do */
+    }
+
+}
+
+.btn-link {
+    display: block;
+    flex-shrink: 0;
+
+    background-color: $red-dark;
+    border-radius: 50%;
+    width: 4.6rem;
+    height: 4.6rem;
+    background-image: url(../assets/images/icons/arrow-small-right.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include mobile {
+        width: 7.2rem;
+        height: 7.2rem;
+
+    }
+
+
+}

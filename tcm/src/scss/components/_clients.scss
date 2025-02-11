@@ -1,0 +1,45 @@
+.clients {
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+
+  &-list {
+    display: flex;
+    gap: 2rem;
+    &+.clients-list{
+      margin-top: 2rem;
+    }
+
+    & li {
+      flex-shrink: 0;
+      display: flex;
+      width: 27rem;
+      height: 10rem;
+
+
+      @include small-tablet {
+        height: 9rem;
+      }
+
+      & img {
+        object-fit: contain;
+        object-position: center;
+        filter: grayscale(1);
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+      }
+    }
+  }
+
+}
+
+@keyframes bladerunner {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-185%, 0);
+  }
+}

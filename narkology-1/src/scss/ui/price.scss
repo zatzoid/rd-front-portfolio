@@ -1,0 +1,87 @@
+.price {
+    margin-left: auto;
+    display: flex;
+    gap: 0.3rem;
+
+    grid-column: 1;
+    grid-row: 2;
+
+    @include small-tablet {
+        margin-right: auto;
+        margin-left: 0;
+
+    }
+
+    &-context {
+        color: $gray;
+        font-family: Gilroy;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.5rem;
+        align-self: flex-end;
+         &:last-of-type::before{
+            content: '/';
+         }
+
+        @include small-tablet {
+            font-size: 2.8rem;
+            line-height: 3.8rem;
+        }
+    }
+
+    &-data {
+        font-family: Euclid Circular A;
+        font-size: 4rem;
+        font-weight: 500;
+        line-height: 4rem;
+        display: flex;
+        align-items: flex-start;
+
+        @include small-tablet {
+            font-size: 5.8rem;
+            line-height: 6rem;
+        }
+
+        &::after {
+            content: '₽';
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 3rem;
+
+        }
+    }
+
+    &_small {
+        @include small-tablet {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+        }
+
+        & .price-context {
+            &:last-of-type {
+                @include small-tablet {
+                    grid-column: 1 / span 2;
+                    grid-row: 2;
+                    text-align: center;
+                    &::before{
+                        content: '';
+                     }
+                }
+                
+            }
+
+            @include small-tablet {
+                font-size: 2.2rem;
+                line-height: 3.2rem;
+            }
+        }
+
+        & .price-data {
+            @include small-tablet {
+                font-size: 4.2rem;
+                line-height: 5.2rem;
+            }
+        }
+    }
+}

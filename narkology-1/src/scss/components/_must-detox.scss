@@ -1,0 +1,68 @@
+.must-detox {
+    &__c {
+        display: grid;
+        grid-template-columns: 47rem auto;
+        gap: 3.5rem;
+
+        @include small-tablet {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+        }
+
+        &-left {}
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+
+            @include small-tablet {
+                gap: 3rem;
+                grid-row: 1;
+            }
+
+            & .tl1 {
+                margin-bottom: 3rem;
+            }
+
+            & h2 {
+                font-family: 'Euclid Circular A';
+                font-weight: 500;
+                font-size: 4rem;
+                line-height: 120%;
+
+                @include small-tablet {
+                    font-size: 5.4rem;
+                }
+            }
+            & h3 {
+                font-family: 'Euclid Circular A';
+                font-weight: 500;
+                font-size: 3rem;
+                line-height: 120%;
+
+                @include small-tablet {
+                    font-size: 4.5rem;
+                } 
+            }
+
+            & p {
+                font-family: 'Gilroy';
+                font-weight: 500;
+                font-size: 2rem;
+                line-height: 140%;
+
+                @include small-tablet {
+                    font-size: 2.8rem;
+                }
+            }
+            & ul {
+                padding-left: 3rem;
+                & li{
+                    list-style-image: url(./assets/images/icons/dot.svg);
+                }
+            }
+        }
+
+    }
+}

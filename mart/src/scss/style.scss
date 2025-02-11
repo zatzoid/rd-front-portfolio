@@ -1,0 +1,207 @@
+$black: #140E0A;
+$black40: rgba(20, 14, 10, 0.40);
+$black16: rgba(20, 14, 10, 0.16);
+$white: #FFFEF8;
+$white40: rgba(255, 254, 248, 0.40);
+$bg: $white;
+$red: rgba(217, 56, 56, 1);
+$green: rgb(94, 217, 56);
+$sectionGap: 13.4rem;
+$sectionGapMobile: 13rem;
+$contentWidth: 173rem;
+$mobilePadding: 1.6rem;
+$headerGap: 10rem;
+$headerGapMob: 16rem;
+@mixin mob-pad{
+  @include mobile{
+    padding-left: $mobilePadding;
+    padding-right: $mobilePadding;
+  }
+}
+
+
+html {
+  font-family: 'Open Sans'; // шрифт по умолчанию по сайту
+  font-size: 0.5208335vw; // на разрешении 1920 0.520835vw === 10px
+  font-style: normal;
+  font-weight: normal;
+  -webkit-animation: bugfix infinite 1s;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  opacity: 0;
+  &._page-ready{
+    opacity: 1;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 10px;
+  }
+
+  @include mobile {
+    font-size: 5px;
+    font-size: 1.5625vw;
+    font-size: calc((100 / 375) * 5vw); // где 375 это ширина моб версии макета
+    -webkit-text-size-adjust: none;
+  }
+}
+
+
+
+body {
+  background-color: $bg;
+  color: $black;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+
+  @include mobile {
+    -webkit-text-size-adjust: none;
+  }
+
+  ._lock & {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  position: relative;
+  // overflow: hidden;
+}
+
+.container {
+  width: $contentWidth;
+  margin: 0 auto;
+
+  @include mobile {
+    width: 100%;
+    padding-left: $mobilePadding;
+    padding-right: $mobilePadding;
+  }
+}
+
+
+// main
+main {
+  flex-grow: 1;
+
+  section {
+  
+    min-height: 100dvh;
+    overflow: hidden;
+    background-color: $bg;
+
+
+    @include mobile {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+input,
+textarea {
+  -webkit-animation: bugfix infinite 1s;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+
+a {
+  color: unset;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+button,
+input,
+a,
+textarea {
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    outline: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  padding: 0;
+  background-color: transparent;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}

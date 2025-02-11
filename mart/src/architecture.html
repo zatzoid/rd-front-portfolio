@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>само напишется</title>
+
+  <link rel="preload" href="./assets/fonts/Circe.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./assets/fonts/Forum.woff2" as="font" type="font/woff2" crossorigin="">
+  <style>
+    @font-face {
+        font-family: 'Circe';
+        src: local('Circe'),
+        url('./assets/fonts/Circe.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+
+    @font-face {
+        font-family: 'Forum';
+        src: local('Forum'),
+        url('./assets/fonts/Forum.woff2') format('woff2');
+
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+</style>
+</head>
+
+
+<body>
+    <div class="wrapper  main-swiper swiper">
+        <include src="./components/_header.html"></include>
+        <main class="swiper-wrapper">
+            <!--  -->
+            <section class="arch-heading" data-anime-header="0">
+                <div class="ui-bg anime-height-bottom" >
+                    <img src="./assets/images/arch.png" alt="">
+                </div>
+                <div class="container arch-heading__c col-wh">
+                    <div class="ui-line anime-width-right" data-anime-delay="1s" data-anime-speed="1s"></div>
+                    <button class="btn-primary" data-modal="request">
+                        <span class="btn-primary-anchor">
+                            <span class="btn-primary-c">
+                                <span class="btn-primary-text col-wh anime-height-bottom" data-anime-trigger="2"
+                                    data-anime-delay="1s">
+                                    оставить <br />
+                                    заявку
+                                </span>
+                                <span class="ui-icon _arrow-white-right anime-height-top" data-anime-trigger="2" data-anime-delay="1s">
+
+                                </span>
+                            </span>
+                            <span class="btn-primary-circle anime-height-bottom" data-anime-trigger="2"
+                                data-anime-delay="1s"></span>
+                        </span>
+                    </button>
+                    <div class="tl1 txt-up anime-translate-top" >
+                        <h1 class="anime-translate-t" data-anime-delay="1s">
+                            архитектура
+                        </h1>
+                    </div>
+
+                    <div class="txt22 txt-up anime-translate-top" >
+                        <p class="anime-translate-t" data-anime-delay="1s">
+                            Профессиональная <br />
+                            разработка архитектурных <br />
+                            проектов
+                        </p>
+                    </div>
+                    <div class="txt20 arch-heading__c-bottom anime-translate-bottom" >
+                        <p class="anime-translate-t" data-anime-delay="1s">
+                            Наш подход гарантирует, что ваш дом будет <br />
+                            не только эстетичным, но и функциональным, <br />
+                            адаптированным к вашим потребностям.
+                        </p>
+                    </div>
+
+                    <div class="txt20 arch-heading__c-top anime-translate-bottom" >
+                        <p class="anime-translate-t" data-anime-delay="1s">
+                            Комплексное решение для создания вашего <br />
+                            идеального дома. Мы предлагаем полный <br />
+                            цикл разработки от эскизного проекта <br />
+                            до сопровождения строительных работ.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+            <!--  -->
+            <include src="./components/_two-side_arch.html"></include>
+            <!--  -->
+            <section class="arch-follow" data-anime-states="2">
+                <div class="container">
+                    <div class="arch-follow__top">
+                        <button class=" btn-primary _black" data-modal="request">
+                            <span class="btn-primary-anchor">
+                                <span class="btn-primary-c">
+                                    <span class="btn-primary-text anime-height-bottom" data-anime-delay="1s">
+                                        оставить <br />
+                                        заявку
+                                    </span>
+                                    <span class="ui-icon _arrow-black-right anime-height-top" data-anime-delay="1s">
+                                    </span>
+                                </span>
+                                <span class="btn-primary-circle anime-height-bottom" data-anime-delay="1s"></span>
+                            </span>
+                        </button>
+                        <div class="ui-line _black anime-width-right" data-anime-delay="1s"></div>
+                        <div class="tl1 txt-up anime-translate-top">
+                            <p class="anime-translate-t">
+                                Сопровождение <br />
+                                проекта
+                            </p>
+                        </div>
+                        <div class="txt20 anime-translate-top">
+                            <p class="anime-translate-t">
+                                Мы предлагаем полное <br />
+                                сопровождение на всех этапах <br />
+                                реализации архитектурного проекта:
+                            </p>
+                        </div>
+                    </div>
+                    <div class="arch-follow__body">
+                        <div class="arch-follow__body-img anime-height-bottom">
+                            <img src="./assets/images/arch-follow.png" alt="">
+                        </div>
+                        <div class="arch-follow__body-text">
+                            <div class="anime-translate-bottom tl3 txt-up">
+                                <p class="anime-translate-t" data-anime-delay=".5s">
+                                    Внесение изменений <br />
+                                    в архитектурный облик <br />
+                                    при необходимости
+                                </p>
+                            </div>
+                            <div class="anime-translate-bottom tl3 txt-up">
+                                <p class="anime-translate-t" data-anime-delay=".5s">
+                                    Подбор <br />
+                                    материалов и проверенных <br />
+                                    поставщиков
+                                </p>
+                            </div>
+                            <div class="anime-translate-bottom tl3 txt-up">
+                                <p class="anime-translate-t" data-anime-delay=".5s">
+                                    Взаимодействие <br />
+                                    с ландшафтными <br />
+                                    дизайнерами
+                                </p>
+                            </div>
+                            <div class="anime-translate-bottom tl3 txt-up">
+                                <p class="anime-translate-t" data-anime-delay=".5s">
+                                    Регулярные выезды <br />
+                                    на объект для контроля <br />
+                                    хода работ
+                                </p>
+                            </div>
+                            <div class="arch-follow__body-text-price anime-height-top" data-anime-delay="1s">
+                                <p class="txt14 txt-up">
+                                    Стоимость <br />
+                                    сопровождения проекта
+                                </p>
+                                <p class="txt22">
+                                    от 150 000 ₽ / месяц
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <section class="arch-care">
+                <div class="container">
+                    <div class="arch-care__top">
+                        <div class="tl1 anime-translate-top">
+                            <p class="anime-translate-t">
+                                Премиальный сервис <br />
+                                с заботой о вас
+                            </p>
+                        </div>
+                        <div class="txt22 txt-up anime-translate-bottom">
+                            <p class="anime-translate-t">
+                                преимущества работы с нами
+                            </p>
+                        </div>
+                        <a href="#" class="btn-second">
+                            <span class="btn-second-text anime-height-top" data-anime-delay="1.5s">Познакомьтесь с
+                                ценами</span>
+                            <span class="btn-second-circle anime-height-bottom" data-anime-delay="1.5s"> </span>
+                            <span class="ui-icon anime-height-bottom" data-anime-delay="1.5s">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#140E0A"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4297 5.92969L20.4997 11.9997L14.4297 18.0697" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M3.5 12H20.33" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="swiper">
+                        <ul class="swiper-wrapper">
+
+                            <li class="swiper-slide ">
+                                <div class=" arch-care__slide">
+                                    <div class=" arch-care__slide-img anime-height-bottom">
+                                        <img src="./assets/images/arch-care-1.png" alt="">
+                                    </div>
+                                    <div class="arch-care__slide-text">
+                                        <div class="tl3 txt-up anime-translate-bottom">
+                                            <p class="anime-translate-t" data-anime-delay=".5s">
+                                                Цельность
+                                                проекта
+                                            </p>
+                                        </div>
+                                        <div class="txt20 anime-translate-bottom">
+                                            <p class="anime-translate-t" data-anime-delay=".5s">
+                                                Полная гармония внешнего
+                                                и внутреннего облика, так как архитектура и интерьер разрабатываются
+                                                одной
+                                                командой. Это создаёт единый концепт, соответствующий вашему видению.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="swiper-slide anime-height-bottom">
+                                <div class=" arch-care__slide">
+                                    <div class=" arch-care__slide-img">
+                                        <img src="./assets/images/arch-care-2.png" alt="">
+                                    </div>
+                                    <div class="arch-care__slide-text">
+                                        <div class="tl3 txt-up anime-translate-bottom">
+                                            <p class="anime-translate-t" data-anime-delay=".5s">
+                                                Экономия времени
+                                                и ресурсов
+                                            </p>
+                                        </div>
+                                        <div class="txt20 anime-translate-bottom">
+                                            <p class="anime-translate-t" data-anime-delay=".5s">
+                                                Скидка на дизайн-проект, так как основные планировочные решения
+                                                обсуждаются
+                                                на этапе архитектуры, исключая возврат к ним на других стадиях.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="swiper-slide anime-height-bottom">
+                                <div class=" arch-care__slide">
+                                    <div class=" arch-care__slide-img">
+                                        <img src="./assets/images/arch-care-3.png" alt="">
+                                    </div>
+                                    <div class="arch-care__slide-text">
+                                        <div class="tl3 txt-up anime-translate-bottom">
+                                            <p class="anime-translate-t" data-anime-delay=".5s">
+                                                Современные
+                                                технические решения
+                                            </p>
+                                        </div>
+                                        <div class="txt20 anime-translate-bottom">
+                                            <p class="anime-translate-t" data-anime-delay=".5s">
+                                                Мы предлагаем инновационные подходы, чтобы ваш дом был не только
+                                                красивым,
+                                                но и долговечным
+                                                и соответствовал современным стандартам.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="swiper-slide anime-height-bottom">
+                                <div class=" arch-care__slide">
+                                    <div class=" arch-care__slide-img">
+                                        <img src="./assets/images/arch-care-4.png" alt="">
+                                    </div>
+                                    <div class="arch-care__slide-text">
+                                        <div class="tl3 txt-up anime-translate-bottom">
+                                            <p class="anime-translate-t" data-anime-delay=".5s">
+                                                Максимальная эстетика
+                                                и ценности
+                                            </p>
+                                        </div>
+                                        <div class="txt20 anime-translate-bottom">
+                                            <p class="anime-translate-t" data-anime-delay=".5s">
+                                                Наша архитектура эстетически выверена, а благодаря преобладанию
+                                                в нашем стиле эклектики, проекты индивидуальны, наполнены смыслами
+                                                и вечно ценными традициями.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <include src="./components/_our-projects.html"></include>
+            <!--  -->
+            <include src="./components/_faq.html"></include>
+            <!--  -->
+            <include src="./components/_our-services.html"></include>
+            <!--  -->
+            <include src="./components/_request-form.html"></include>
+            <!--  -->
+        </main>
+        <include src="./components/_footer.html"></include>
+    </div>
+
+
+</body>
+
+</html>

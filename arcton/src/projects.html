@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <include src="./components/_header.html"></include>
+        <main>
+            <include src="./components/_heading.html"></include>
+            <!--  -->
+            <section class="projects">
+                <div class="container">
+                    <div class="projects__top">
+                        <p class="tl1">Проекты</p>
+                        <div class="projects__top-btns">
+                            <button class="switcher-btn tl3">
+                                Проекты в реализации
+                            </button>
+                            <button class="switcher-btn tl3">
+                                Завершённые проекты
+                            </button>
+                        </div>
+                    </div>
+                    <div class="projects-container">
+                        <div class="projects-wrapper">
+                            <div class="switcher-slide">
+                                <ul>
+                                    <li>
+                                        <include src="./components/_project-card.html" data-props='{
+                                            ".project-card__date": {
+                                              "html": "<span class=_solo>2024</span>"
+                                            }
+                                          }'></include>
+                                    </li>
+                                    <li>
+                                        <include src="./components/_project-card.html"></include>
+                                    </li>
+                                    <li>
+                                        <include src="./components/_project-card.html"></include>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="switcher-slide">
+                                <ul>
+                                    <li>
+                                        <include src="./components/_project-card.html"></include>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary">
+                        <span class="btn-primary-text">
+                            Загрузить еще
+                        </span>
+                        <span class="btn-primary-arrow"></span>
+                    </button>
+
+                </div>
+            </section>
+            <!--  -->
+            <include src="./components/_request-form.html"></include>
+        </main>
+        <include src="./components/_footer.html"></include>
+    </div>
+
+
+</body>
+
+</html>

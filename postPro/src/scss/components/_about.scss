@@ -1,0 +1,402 @@
+.about {
+    position: relative;
+
+    overflow: visible;
+
+
+
+    & .container {
+        position: relative;
+
+    }
+
+    &__pic {
+        position: absolute;
+        z-index: -1;
+        top: -12rem;
+        right: 13rem;
+        width: 27rem;
+        height: 25rem;
+        display: flex;
+
+        @include mobile {
+
+            top: -6rem;
+            right: 6rem;
+            width: 12rem;
+            height: 12rem;
+        }
+
+        & img {
+            object-fit: contain;
+        }
+    }
+
+    & .gradient-bg {
+        top: 40%;
+        left: 40%;
+
+        @include mobile {
+            top: 70%;
+            display: none;
+        }
+    }
+
+
+    @include mobile {
+        margin-top: 17rem;
+    }
+
+    &__c {
+        display: grid;
+        grid-template-columns: .9fr 1fr;
+        gap: 15rem;
+
+        @include mobile {
+            grid-template-columns: 100%;
+            gap: 3rem;
+        }
+
+        &-left {
+            display: flex;
+            flex-direction: column;
+            gap: 6rem;
+            height: fit-content;
+            margin: auto 0;
+
+            @include mobile {
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+            }
+
+            &-text {
+                font-family: Idealist Sans;
+                font-size: 3.5rem;
+                font-weight: 300;
+                line-height: 110%;
+                letter-spacing: 0.05em;
+
+                @include mobile {
+                    font-size: 2.8rem;
+                    text-align: center;
+                }
+
+
+
+
+            }
+
+            &-years {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-end;
+
+                &-top {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    margin-bottom: 1rem;
+
+                    & svg {
+                        height: 1.8rem;
+                        width: 10.3rem;
+
+                        @include mobile {
+                            width: 8.4rem;
+                            height: 1.48rem;
+
+                        }
+                    }
+
+
+                }
+
+                &-bottom {
+                    & svg {
+                        width: 6.1rem;
+                        height: 1.4rem;
+
+                        @include mobile {
+                            width: 5rem;
+                            height: 2.5rem;
+                        }
+                    }
+
+
+                }
+
+                &-count {
+                    display: flex;
+                    width: fit-content;
+                    gap: 3.8px;
+
+                    & svg {
+                        width: 10.8rem;
+                        height: 9.4rem;
+                    }
+                }
+
+
+                & .col-purple {
+                    font-style: italic;
+                }
+
+                @include mobile {
+                    padding-left: 10rem;
+
+                    &-count {
+                        display: flex;
+                        width: fit-content;
+                        justify-content: center;
+
+                        & svg {
+                            flex-shrink: 0;
+                            height: 8rem;
+                            width: fit-content;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        &-right {
+
+
+            &-head {
+                text-transform: uppercase;
+                font-family: 'Esqadero FF CY 4F';
+                font-size: 2.2rem;
+                font-weight: 400;
+                line-height: normal;
+                text-align: left;
+                padding: 1.5rem;
+                box-sizing: border-box;
+                width: fit-content;
+                /* border-image-source: $staticBg;
+                border-image-slice: 1; */
+                border-radius: 1rem;
+                display: block;
+
+                & span {
+                    height: 2rem;
+                    display: block;
+
+                    @include mobile {
+                        height: 1.7rem;
+                        transform: translateY(.5rem);
+                    }
+                }
+
+
+
+                &:after {
+                    top: 0;
+                    height: 100%;
+                }
+
+
+            }
+
+            &-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4.5rem;
+                margin-top: 4.5rem;
+
+
+                &-e {
+
+                    font-family: 'Esqadero FF CY 4F';
+                    font-size: 2.2rem;
+                    font-weight: 400;
+                    line-height: normal;
+                    height: 4.6rem;
+                    padding: 0 1.5rem;
+                    box-sizing: border-box;
+
+                    user-select: none;
+                    z-index: 2;
+                    /*   transition: all .5s; */
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    cursor: pointer;
+
+
+                    &._opened {
+                        cursor: default;
+                    }
+
+                    @include mobile {
+                        font-size: 2.15rem;
+                        line-height: normal;
+                        padding: 0 1.6rem;
+                        height: 5rem;
+                    }
+
+                    &-wrp {
+                        border-radius: 1rem;
+                        position: absolute;
+                        z-index: 5;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        transition: all .5s ease-in-out;
+                        overflow: hidden;
+
+                        /*     background-image: url(../assets/images/texture.webp);
+                        background-size: 14rem; */
+                        &-text {
+                            margin-top: 4.6rem;
+                            position: relative;
+                            z-index: 3;
+                            overflow: hidden;
+                            width: 100%;
+
+                            @include mobile {
+                                margin-top: 5rem;
+                            }
+
+                            &-el {
+                                padding: 5px 5rem 4.6rem;
+
+                                @include mobile {
+                                    padding: 5px 5rem 5rem;
+                                }
+
+                                /*  white-space: nowrap; */
+
+                            }
+                        }
+
+
+                    }
+
+                    &-wrpText {
+                        position: relative;
+                        z-index: 6;
+                        transition: transform .5s ease-in-out;
+                        width: 100%;
+                        white-space: nowrap;
+                        display: flex;
+                        flex-wrap: nowrap;
+                    }
+
+                    @include hover {
+                        & .about__c-right-tags-e-wrp {
+
+                            box-shadow: 0px 0px 6rem .5rem rgba(0, 164, 131, .5);
+                        }
+
+                        & .about__c-right-tags-e-bg {
+                            box-shadow: 0px 0px 2rem .5rem rgba(0, 164, 131, .5) inset;
+                        }
+
+                        & .about__c-right-tags-e-border {
+                            background-image: none;
+                        }
+
+                        & .about__c-right-tags-e-img {
+                            /*  background-size: 30rem; */
+                        }
+
+                        & .about__c-right-tags-e-wrpText {
+                            color: $green;
+                        }
+                    }
+
+
+                    &-text {
+                        position: relative;
+                        z-index: 6;
+                        height: 2rem;
+
+                        @include mobile {
+                            height: 1.7rem;
+                        }
+
+                    }
+
+
+
+                    & span {
+                        position: relative;
+                        z-index: 5;
+                    }
+
+                    &-dot {
+                        position: relative;
+                        z-index: 6;
+                        color: $white;
+                        margin-right: 1rem;
+
+                        @include mobile {
+                            margin-top: .3rem;
+                        }
+                    }
+
+
+
+
+
+                    &-border {
+                        background-color: $green;
+                        background-image: linear-gradient(129.47deg, rgba(14, 168, 133, 0.61) 7.71%, rgba(161, 66, 255, 0.61) 78.89%);
+                        position: absolute;
+                        z-index: -1;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        border-radius: 10px;
+                        mask-image: url(../assets/images/about-tag-mask.svg);
+                        mask-size: 100%;
+
+                        @include mobile {
+                            border-radius: 6px;
+                        }
+                    }
+
+
+
+                    &-bg {
+
+                        position: absolute;
+                        z-index: 2;
+                        width: calc(100% - 2px);
+                        top: 1px;
+                        left: 1px;
+                        height: calc(100% - 2px);
+                        border-radius: 10px;
+                        background-color: rgba(20, 18, 22, 0.11);
+                        backdrop-filter: blur(10px);
+
+                        /*   box-shadow: 0px 0px .1rem .1rem rgba(0, 164, 131, .5) inset; */
+                        @include mobile {
+                            border-radius: 6px;
+                        }
+                    }
+
+                    &-img {
+                        position: absolute;
+                        z-index: 5;
+                        width: 100%;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        border-radius: 1rem;
+                        background-size: 50rem;
+                        background-position: center;
+                        opacity: .3;
+                        transition: background-size .5s;
+                    }
+
+                }
+
+            }
+        }
+    }
+}

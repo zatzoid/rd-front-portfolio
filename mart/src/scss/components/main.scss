@@ -1,0 +1,78 @@
+.heading-main {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    & .ui-line {
+        position: absolute;
+        top: 29%;
+
+
+        @include mobile {
+            top: 29.5rem;
+            left: 0rem;
+            margin: 0;
+            transform: translate(0, 0);
+        }
+    }
+
+    &__bg {
+        top: 50%;
+        transform: translateY(-50%);
+        height: 101%;
+    }
+
+    &__c {
+        width: 113rem;
+        height: 50rem;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: space-between;
+        color: $white;
+        margin-left: auto;
+
+        @include mobile {
+            height: 100%;
+            width: 100%;
+            padding-top: 23rem;
+        }
+
+        & .btn-primary {
+            position: absolute;
+            top: 5rem;
+
+            @include desktop {
+                left: -10rem;
+
+            }
+
+            @include mobile {
+                top: 15rem;
+                right: 22rem;
+
+            }
+        }
+
+        &-bottom {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            @include mobile {
+                flex-direction: column;
+                gap: 3.2rem;
+                margin-top: auto;
+                margin-bottom: 0;
+            }
+
+            & .txt20 {
+                max-width: 51rem;
+
+                @include mobile {
+                    max-width: 60rem;
+                }
+            }
+        }
+    }
+}

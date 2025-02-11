@@ -1,0 +1,215 @@
+.two-side {
+    position: relative;
+
+    @include mobile {
+        padding-bottom: 0;
+
+        &._arch {
+            padding-bottom: 0;
+
+            & .two-side__grid-el-price {
+                padding-left: $mobilePadding;
+                padding-right: $mobilePadding;
+
+                &+.txt22 {
+                    padding-left: $mobilePadding;
+                    padding-right: $mobilePadding;
+                }
+            }
+        }
+    }
+
+
+
+    & .container {
+        position: relative;
+
+        @include desktop {
+            display: grid;
+            grid-template-rows: min-content auto;
+            gap: 4rem;
+        }
+
+        @include mobile {
+            height: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: min-content auto;
+        }
+
+        & .ui-line {
+            top: 100%;
+            left: 0;
+
+            @include mobile {
+                top: 92%;
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        align-items: center;
+        transition: margin .5s linear;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 3.2rem;
+            align-items: flex-start;
+            /* margin-top: 16.4rem; */
+            padding-left: $mobilePadding;
+            padding-right: $mobilePadding;
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    @include mobile {
+
+
+        &[data-anime-state='1'] {
+            & .two-side__grid {
+                grid-template-rows: .6fr .4fr 0fr 0fr;
+
+            }
+        }
+
+        &[data-anime-state='2'] {
+            & .two-side__grid {
+                grid-template-rows: 0fr .7fr .3fr 0fr;
+
+                & .two-side__grid-el-text {
+                    padding-top: 0;
+                }
+
+                & .two-side__grid-el:nth-child(2) {
+                    padding-bottom: 3rem;
+                }
+
+            }
+
+            & .two-side__top {
+                margin-top: 0;
+            }
+        }
+
+        &[data-anime-state='3'] {
+            & .two-side__top {
+                margin-top: 0;
+            }
+
+            & .two-side__grid {
+                grid-template-rows: 0fr 0fr .4fr .6fr;
+
+            }
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 100%;
+        gap: 4.4rem;
+        height: 100%;
+        /*  height: 62dvh;
+        max-height: 60rem; */
+
+        @include mobile {
+            height: 100%;
+            grid-template-columns: 100%;
+            grid-template-rows: 60% 40% 0% 0%;
+            transition: grid .6s ease-in-out;
+            gap: 0;
+            max-height: 100%;
+        }
+
+        &-el {
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+            height: 100%;
+            position: relative;
+            transition: padding .6s ease-in-out;
+
+            @include mobile {
+                overflow: hidden;
+                flex-shrink: 0;
+
+
+                &>* {
+                    flex-shrink: 0;
+                }
+
+            }
+
+            &-price {
+                margin-top: auto;
+            }
+
+            &-text {
+
+                display: flex;
+                flex-direction: column;
+
+                @include desktop {
+                    &:nth-child(2) {
+                        height: 100%;
+                        align-items: flex-start;
+                    }
+                }
+
+                @include mobile {
+                    &._grid {
+                        display: grid;
+                        grid-template-columns: .7fr .4fr;
+                        height: 100%;
+                    }
+
+                    height: fit-content;
+                    padding: 4rem $mobilePadding 0;
+                    box-sizing: border-box;
+                    transition: padding .6s ease-in-out;
+
+                    &+.two-side__grid-el-text {
+                        padding: 0 $mobilePadding;
+                    }
+
+                }
+
+                & .btn-primary {
+                    margin-top: auto;
+                    margin-left: 50%;
+                    margin-bottom: 15rem;
+
+                    @include mobile {
+                        margin-bottom: 34rem;
+                        margin-left: 14rem;
+
+                    }
+
+                }
+            }
+
+            &-img {
+                display: flex;
+                height: 100%;
+
+                @include mobile {
+                    height: 72rem;
+                    max-height: 50dvh;
+                }
+
+                & img {
+
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+
+        }
+    }
+}

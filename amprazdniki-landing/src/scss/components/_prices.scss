@@ -1,0 +1,84 @@
+.prices {
+    padding-top: 16rem;
+    padding-bottom: 3rem;
+    background-color: $gray;
+    @include mobile{
+        padding-top: 8rem;
+    }
+
+
+    & .tl2 {
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+
+    &__c {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        @include mobile{
+            grid-template-columns: 100%;
+        }
+
+        &-item {
+            height: fit-content;
+
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 3.2rem;
+            box-sizing: border-box;
+            color: $white;
+               
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            border-radius: .1rem;
+
+            &-body {
+               
+
+                &-list {
+                    margin: 1.5rem 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    padding-left: 3rem;
+
+                    & li {
+                        list-style-image: url(./assets/images/icons/dot-white.svg);
+                    }
+                    &-wrp{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                    }
+
+                }
+
+                &-price {
+                   display: flex;
+                   width: 100%;
+                   justify-content: space-between;
+                }
+            }
+
+            &-img {
+                display: flex;
+                height: 30rem;
+
+                @include mobile {
+                    height: 60rem;
+                }
+
+                & img {
+                    object-fit: cover;
+                }
+            }
+
+           
+
+
+        }
+    }
+}

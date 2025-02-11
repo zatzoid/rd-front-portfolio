@@ -1,0 +1,31 @@
+.footer {
+
+    margin-top: 1.6rem;
+    padding: 2rem 0;
+    width: 100%;
+    position: relative;
+    @include mobile{
+        padding: 6rem 0 6rem;
+    }
+    & .ui-line{
+        top: 0;
+    }
+
+
+    &__c {
+        height: 7.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobile {
+            height: auto;
+            flex-direction: column;
+            gap: 6rem;
+            padding: 3rem $mobilePadding 3rem;
+            align-items: flex-start;
+        }
+
+    }
+
+}

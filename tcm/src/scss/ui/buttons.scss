@@ -1,0 +1,87 @@
+.btn-arrow {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    position: relative;
+    padding-right: 3rem;
+    @include small-tablet{
+        padding-right: 6rem;
+    }
+
+    &:hover img,
+    &:hover svg {
+        transform: rotate(-90deg) translateY(1rem);
+    }
+
+
+    & img,
+    & svg {
+        position: absolute;
+        top: -.5rem;
+        right: 0;
+        @include same-size(2.6rem, 2.6rem);
+       
+        transform: rotate(-90deg) translateY(0);
+        transition: transform .5s;
+        @include small-tablet{
+        top: -1rem;
+        }
+
+    }
+}
+
+.btn-green,
+.btn-white,
+.btn-tr,
+.btn-header {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 3.3rem 4rem;
+    gap: 1rem;
+    box-sizing: border-box;
+    border: .2rem solid transparent;
+    text-transform: uppercase;
+    transition: color .5s, background-color .5s, border-color .5s;
+
+    & img,
+    & svg {
+        @include same-size(2.4rem, 2.4rem);
+    }
+
+}
+
+/*  */
+.btn-green {
+    border-color: $gray;
+}
+
+.btn-green:hover {
+    background-color: $green;
+}
+
+/*  */
+.btn-white {
+    color: $white;
+    border-color: $gray-main;
+}
+
+.btn-white:hover {
+    background-color: $white;
+    color: $black;
+}
+
+/*  */
+.btn-tr {
+    border-color: $gray;
+    color: $white;
+
+    &:hover {
+        border-color: $gray;
+        color: $black;
+    }
+}
+.btn-header{
+    border-color: $gray;
+    
+}

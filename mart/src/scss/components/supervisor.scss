@@ -1,0 +1,382 @@
+.supervisor-heading {
+    position: relative;
+    display: flex;
+
+    & .ui-bg {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+
+    }
+
+    & .ui-line {
+        z-index: 2;
+        left: 70%;
+      
+
+        @include desktop {
+            bottom: 50%;
+        }
+
+        @include mobile {
+            bottom: 50%;
+           left: 34%;
+        }
+
+    }
+
+    &__c {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 32rem auto auto 46rem;
+        grid-template-areas:
+            '. . . top'
+            'btn ttl . .'
+            ' . price we idk';
+        gap: 2.6rem;
+
+        height: 100%;
+
+        @include mobile {
+            grid-template-columns: 1.1fr .7fr;
+            grid-template-areas:
+                'ttl btn'
+                'top top'
+                'we we'
+                'price price';
+            padding-top: 23rem;
+            padding-bottom: 0;
+
+        }
+
+
+        & .tl1 {
+            grid-area: ttl;
+            height: fit-content;
+            position: relative;
+            align-self: center;
+            position: relative;
+            width: 100%;
+          
+        }
+
+        &-top {
+            height: fit-content;
+            grid-area: top;
+            align-self: flex-start;
+
+            @include mobile {
+                align-self: flex-end;
+            }
+        }
+
+        &-we {
+            height: fit-content;
+            grid-area: we;
+            align-self: flex-end;
+
+            @include mobile {
+                align-self: flex-start;
+            }
+        }
+
+        &-idk {
+            height: fit-content;
+            grid-area: idk;
+            align-self: flex-end;
+        }
+
+        &-price {
+            grid-area: price;
+            display: flex;
+            gap: 8rem;
+            align-self: center;
+            align-self: flex-end;
+
+
+            &-el {
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+            }
+        }
+
+        & .btn-primary {
+            grid-area: btn;
+            width: fit-content;
+            height: fit-content;
+            margin-left: 22rem;
+
+            @include mobile {
+                margin-left: 14rem;
+                transform: translateY(-4rem);
+            }
+        }
+    }
+}
+
+.supervisor-joke {
+    &__c {
+        width: 120rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        gap: 21rem;
+
+        @include mobile {
+            text-align: center;
+        }
+
+        &-top {}
+
+        &-bottom {
+            align-self: flex-end;
+        }
+
+    }
+}
+
+.supervisor-adv {
+
+    & .container {
+        position: relative;
+
+        @include mobile {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        & .ui-line {
+            position: absolute;
+
+            @include desktop {
+                top: 23.2rem;
+            }
+
+            @include mobile {
+                bottom: -6rem;
+            }
+        }
+
+        & .btn-primary {
+            position: absolute;
+            right: 11%;
+            top: 15rem;
+            z-index: 3;
+
+            @include mobile {
+                top: 97%;
+                right: 28%;
+            }
+        }
+
+        & .swiper-nav {
+            position: absolute;
+            top: 35%;
+            z-index: 3;
+            @include mob-pad;
+
+            @include mobile {
+                top: 100%;
+            }
+        }
+
+
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        margin-bottom: 3.2rem;
+        @include mob-pad;
+
+    }
+
+    &__sliders {
+        display: grid;
+        grid-template-columns: .7fr .3fr;
+        gap: 3.2rem;
+        grid-template-rows: 100%;
+        height: 60dvh;
+        max-height: 62rem;
+        width: 100%;
+
+        @include mobile {
+            grid-template-columns: 100%;
+            max-height: 60dvh;
+        }
+
+        & .swiper {
+            width: 100%;
+            height: 100%;
+
+            &:first-of-type {
+                & .supervisor-adv__sliders-el {
+                    display: grid;
+                    grid-template-columns: .4fr 1fr;
+                    grid-template-rows: 100%;
+                    gap: 4.4rem;
+
+                    @include mobile {
+                        grid-template-columns: 100%;
+                        grid-template-rows: 40dvh 20dvh;
+                        grid-template-areas:
+                            'img'
+                            'text';
+                    }
+
+
+                    &-text {
+                        align-self: flex-end;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2.4rem;
+                        margin-top: auto;
+                        height: 50%;
+                        justify-content: flex-end;
+                        background-color: $white;
+
+
+
+                        @include mobile {
+                            align-self: flex-start;
+                            justify-content: flex-start;
+                            grid-area: text;
+                            height: 100%;
+                            padding-top: 0;
+                            max-width: 50%
+                        }
+
+                        @include mob-pad;
+
+                    }
+
+                    &-img {
+                        display: flex;
+                        height: 100%;
+
+                        @include mobile {
+                            grid-area: img;
+
+                        }
+
+                        & img {
+
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+                }
+            }
+
+            @include desktop {
+
+
+                &:last-of-type {
+                    & .supervisor-adv__sliders-el {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4.4rem;
+
+                        &-text {
+                            margin-top: auto;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2.4rem;
+
+                            margin-top: auto;
+                            height: 32%;
+                            justify-content: flex-end;
+                            background-color: $white;
+
+                        }
+
+                        &-img {
+                            height: 35dvh;
+                            max-height: 36rem;
+                            display: flex;
+
+                            & img {
+                                object-fit: cover;
+                                object-position: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /*  &-left {
+            width: 100%;
+            height: 100%;
+
+            &-el {
+                display: grid;
+                grid-template-columns: .4fr 1fr;
+                grid-template-rows: 100%;
+
+                gap: 4.4rem;
+
+
+                &-text {
+                    align-self: flex-end;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.4rem;
+                    background-color: $white;
+                }
+
+                &-img {
+                    display: flex;
+                    height: 100%;
+
+                    & img {
+
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+        }
+
+        &-right {
+            width: 100%;
+
+
+            &-el {
+                display: flex;
+                flex-direction: column;
+                gap: 4.4rem;
+
+                &-text {
+                    margin-top: auto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.4rem;
+                    background-color: $white;
+                }
+
+                &-img {
+                    height: 35dvh;
+                    max-height: 36rem;
+                    display: flex;
+
+                    & img {
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+        } */
+    }
+
+}

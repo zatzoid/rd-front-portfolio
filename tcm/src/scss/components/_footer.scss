@@ -1,0 +1,135 @@
+.footer {
+    padding: 20rem 0 0;
+    position: relative;
+
+    @include small-tablet {
+        padding: 18rem 0 0;
+    }
+
+
+    &__c {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 9rem;
+        justify-content: space-between;
+        padding: 3rem 0;
+        gap: 7rem 0;
+
+        @include small-tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+
+            & div.mobile {
+                gap: 2rem;
+                & a {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                }
+            }
+        }
+
+
+        &-logo {
+            width: 19.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: .2rem solid $gray;
+            transition: border-color .5s;
+
+            @include small-tablet {
+                border: none;
+                width: 30rem;
+            }
+
+            & svg {
+                width: 80%;
+                max-height: 100%;
+                transition: fill .5s;
+
+                & g>path:nth-child(2) {
+                    transition: fill .5s, stroke .5s;
+
+                }
+            }
+
+            &:hover {
+
+                & svg {
+                    fill: $gray-main;
+
+                    & g>path:nth-child(2) {
+                        fill: $green;
+                        stroke: $green;
+                    }
+                }
+            }
+        }
+
+        &-nav {
+            display: flex;
+
+            @include desktop {
+                & .btn-green {
+                    border-right: none;
+
+                    &:last-of-type {
+                        border-right: .2rem solid #dfdfdf;
+                    }
+                }
+
+            }
+
+        }
+
+
+        &-desk-right {
+            height: 100%;
+            display: flex;
+            gap: 2.4rem;
+
+            & .btn-tr svg path {
+                transition: stroke .5s;
+            }
+
+            & .btn-tr:hover svg path {
+                stroke: $black;
+            }
+        }
+
+        & .mobile {
+            @include small-tablet {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+        }
+
+        & .btn-tr {
+            padding: 3.3rem;
+        }
+
+        &-bottom {
+
+            display: flex;
+            justify-content: space-between;
+            grid-column: 1 / span 3;
+
+            @include small-tablet {
+                grid-column: 1;
+            }
+
+            &-sign svg {
+                height: 5.6rem;
+            }
+
+        }
+
+    }
+
+}

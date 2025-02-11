@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>само напишется</title>
+
+    <link rel="preload" href="./assets/fonts/Circe.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="./assets/fonts/Forum.woff2" as="font" type="font/woff2" crossorigin="">
+    <style>
+        @font-face {
+            font-family: 'Circe';
+            src: local('Circe'),
+                url('./assets/fonts/Circe.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        @font-face {
+            font-family: 'Forum';
+            src: local('Forum'),
+                url('./assets/fonts/Forum.woff2') format('woff2');
+
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper main-swiper swiper">
+        <include src="./components/_header.html"></include>
+        <main class="swiper-wrapper">
+            <section class="projects-detail-heading " data-anime-header="0">
+                <div class="ui-bg anime-height ">
+                    <img src="./assets/images/heading-main.png" alt="" class="anime-zoom">
+                </div>
+                <div class="projects-detail-heading__c ">
+                    <div class="ui-line  anime-width-right" data-anime-delay="2s"></div>
+
+
+                    <div class="container projects-detail-heading__c-body col-wh">
+                        <button class="btn-primary">
+                            <span class="btn-primary-anchor">
+                                <span class="btn-primary-c">
+                                    <span class="btn-primary-text anime-height-top" data-anime-delay="2.1s">
+                                        смотреть <br />
+                                        проект
+                                    </span>
+                                    <span class="ui-icon _arrow-white-right anime-height-bottom"
+                                        data-anime-delay="2.1s">
+                                    </span>
+                                </span>
+                                <span class="btn-primary-circle anime-height-bottom" data-anime-delay="2s"></span>
+                            </span>
+                        </button>
+
+                        <div class="projects-detail-heading__c-body-top">
+                            <h1 class="tl1 txt-up anime-height-bottom" data-anime-delay="1s"> item name</h1>
+                            <p class="txt14 txt-up anime-height-bottom" data-anime-delay="1s"> item type</p>
+                        </div>
+                        <div class="txt22 projects-detail-heading__c-body-values anime-height-top"
+                            data-anime-delay="1s">
+                            <p>12,12,1212</p>
+                            <p class="col-wh ">&middot;</p>
+                            <p>228 m<sup>2</sup></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <section class="location _detail" data-anime-states="2">
+                <div class="container">
+
+                    <p class="tl1 txt-up anime-height">
+                        детально <br />
+                        о реализации проекта <br />
+                        White Khamovniki
+                    </p>
+                    <div class="location__c">
+                        <div class="ui-line _black anime-width-right" data-anime-delay="1s" data-anime-speed="1s"></div>
+                        <button class="btn-primary _black desktop">
+                            <span class="btn-primary-anchor">
+                                <span class="btn-primary-c">
+                                    <span class="btn-primary-text anime-height-bottom" data-anime-delay="1s">
+                                        оставить заявку
+                                    </span>
+                                    <span class="ui-icon _arrow-black-right anime-height-top" data-anime-delay="1s">
+                                    </span>
+                                </span>
+                                <span class="btn-primary-circle anime-height-bottom" data-anime-delay="1s"></span>
+                            </span>
+                        </button>
+                        <div class="anime-translate-bottom">
+                            <p class="anime-translate-t txt14 txt-up location__c-year" data-anime-delay=".4s">
+                                Более 10 лет мы создаем вечноценные интерьеры, используя архитектурный подход в
+                                проектировании
+                                пространства
+                            </p>
+                        </div>
+                        <div class="location__c-small anime-height-bottom" data-anime-delay=".8s">
+                            <img src="./assets/images/message-small.png" alt="">
+                        </div>
+                        <div class="location__c-big anime-height-bottom" data-anime-delay=".8s">
+                            <img src="./assets/images/heading-main.png" alt="">
+                        </div>
+                        <div class="anime-translate-bottom location__c-dnk">
+                            <p class="anime-translate-t txt20 _14" data-anime-delay=".4s">
+                                Современная мебель, хай-тек технологии, гипсовая лепнина - это ДНК нашего стиля.
+                                Благодаря врожденному
+                                чувству прекрасного, насмотренности, опыту
+                                и намеренному избеганию быстротечных трендов наши интерьеры не устаревают
+                                и производят неизгладимый wow-эффект
+                                с первого взгляда.
+                            </p>
+                        </div>
+                        <div class="anime-translate-bottom location__c-object" data-anime-trigger="2">
+                            <p class="anime-translate-t txt20 " data-anime-delay=".4s">
+                                Объекты с нашем дизайном высоко ценятся на рынке недвижимости, быстро продаются и
+                                являются
+                                инвестиционной
+                                ценностью, судя по отзывам наших клиентов
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!--  -->
+            <section class="gallery" data-anime-slider="y">
+                <div class="container swiper gallery__c">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide gallery__c-head">
+                            <div class="gallery__c-head-list anime-width-right">
+                                <div class="gallery__c-head-list-el anime-height-bottom" data-anime-delay=".5s">
+                                    <p class="txt14 col-gray txt-up">item type</p>
+                                    <p class="txt20 ">item data</p>
+                                </div>
+                                <div class="gallery__c-head-list-el anime-height-bottom" data-anime-delay=".5s">
+                                    <p class="txt14 col-gray txt-up">item type</p>
+                                    <p class="txt20 ">item data</p>
+                                </div>
+                                <div class="gallery__c-head-list-el anime-height-bottom" data-anime-delay=".5s">
+                                    <p class="txt14 col-gray txt-up">item type</p>
+                                    <p class="txt20 ">item data</p>
+                                </div>
+                                <div class="gallery__c-head-list-el anime-height-bottom" data-anime-delay=".5s">
+                                    <p class="txt14 col-gray txt-up">item type</p>
+                                    <p class="txt20 ">item data</p>
+                                </div>
+                            </div>
+                            <div class="txt22 gallery__c-head-text txt-center txt-up anime-height-top"
+                                data-anime-delay="1s">
+                                Современный дизайн-проект интерьера квартиры в Москве.
+                                Лаконичность, функциональность и изысканная брутальность – именно так можно описать эту
+                                квартиру площадью 55 кв м, интерьер которой выполнен в современном стиле
+                                с преобладанием темных тонов
+                            </div>
+
+                            <button class="btn-second txt-up mobile" data-modal="request">
+                                <span class="btn-second-text anime-height-top" data-anime-delay="1.5s">оставить заявку</span>
+                                <span class="btn-second-circle anime-height-bottom " data-anime-delay="1.5s">
+                                </span>
+                                <span class="ui-icon anime-height-bottom" data-anime-delay="1.5s">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#140E0A" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.4297 5.92969L20.4997 11.9997L14.4297 18.0697" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M3.5 12H20.33" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+            
+            
+                            </button>
+                        </li>
+                        <li class="swiper-slide gallery__c-plan">
+                            <div class="gallery__c-plan-img anime-height-bottom" data-anime-delay="1s">
+                                <img src="./assets/images/heading-main.png" alt="">
+                            </div>
+                            <div class="gallery__c-plan-text">
+                                <p class="tl1">
+                                    Планировка,
+                                    которой мы городимся
+                                </p>
+                                <p class="txt20">
+                                    Создана с учетом комфорта <br /> и функциональности, продуманная до мельчайших
+                                    деталей.
+                                    Пространство организовано так, чтобы каждый уголок дома стал местом уюта и
+                                    вдохновения, подчеркивая уникальный стиль и продуманность каждой зоны
+                                </p>
+                            </div>
+                        </li>
+                        <li class="swiper-slide gallery__c-img anime-height-bottom" data-anime-delay="1s">
+                            <img src="./assets/images/heading-main.png" alt="">
+                        </li>
+
+                        <li class="swiper-slide gallery__c-img _two anime-height-bottom" data-anime-delay="1s">
+                            <div class="gallery__c-img-img">
+                                <img src="./assets/images/heading-main.png" alt="">
+                            </div>
+                            <div class="gallery__c-img-img">
+                                <img src="./assets/images/heading-main.png" alt="">
+                            </div>
+                        </li>
+                        <li class="swiper-slide gallery__c-img anime-height-bottom" data-anime-delay="1s">
+                            <img src="./assets/images/heading-main.png" alt="">
+                        </li>
+                        <li class="swiper-slide gallery__c-img anime-height-bottom" data-anime-delay="1s">
+                            <img src="./assets/images/heading-main.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!--  -->
+            <include src="./components/_request-form.html"></include>
+
+        </main>
+    </div>
+</body>
+
+</html>

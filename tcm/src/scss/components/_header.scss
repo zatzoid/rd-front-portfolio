@@ -1,0 +1,354 @@
+.header {
+    transition: background-color .5s;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+
+    &._cliped {
+        @include desktop {
+            background-color: rgba(27, 27, 27, 0.4);
+            backdrop-filter: blur(1rem);
+
+        }
+
+        & .header__c-logo {
+            border-color: $gray;
+
+            & svg {
+                fill: $white;
+
+                & g>path:nth-child(2) {
+                    fill: $green;
+                    stroke: $green;
+                }
+            }
+        }
+
+        & .btn-header {
+            color: $white ;
+
+
+            & svg {
+                stroke: $white ;
+            }
+
+        }
+    }
+
+    @include small-tablet {
+        position: absolute;
+    }
+
+    &-wrp {
+        position: relative;
+    }
+
+    & .btn-header {
+        color: $white;
+        border-color: $gray;
+
+        & svg {
+            stroke: $white;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+
+                background-color: $green;
+                color: $white ;
+
+
+                & svg {
+                    stroke: $white ;
+                }
+
+            }
+        }
+
+
+    }
+
+
+    &__c {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 1fr;
+        justify-content: space-between;
+        padding: 3rem 0;
+
+        @include small-tablet {
+            display: flex;
+            padding: 2rem 3rem;
+            justify-content: unset;
+            align-items: center;
+        }
+
+
+
+        &-logo {
+            width: 19.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: .2rem solid $gray;
+            transition: border-color .5s;
+            position: relative;
+            z-index: 102;
+
+            @include small-tablet {
+                width: 30rem;
+                height: 11.2rem;
+
+            }
+
+            & svg {
+                width: 13.3rem;
+                height: 5.6rem;
+                transition: fill .5s;
+
+                @include small-tablet {
+                    height: 8.4rem;
+                    width: 20rem;
+                }
+
+                & g>path:nth-child(2) {
+                    transition: fill .5s, stroke .5s;
+
+                }
+            }
+
+            @media (hover: hover) {
+                &:hover {
+                    border-color: $gray;
+
+                    & svg {
+                        fill: $green;
+
+                        & g>path:nth-child(2) {
+                            fill: $gray-main;
+                            stroke: $gray-main;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-nav {
+            display: flex;
+            height: 100%;
+            & .btn-header{
+                @include desktop{
+                    border-right: none;
+                    &:last-of-type{
+                        border-right: .2rem solid #dfdfdf;
+                    }
+                }
+            }
+
+        }
+
+        &-desk-right {
+            display: flex;
+            gap: 2.4rem;
+
+            & .btn-tr svg path {
+                transition: stroke .5s;
+            }
+
+            & .btn-tr:hover svg path {
+                stroke: $black;
+            }
+        }
+
+
+        &-lang-mob {
+            margin-left: auto;
+
+            & .btn-tr {
+                border: none;
+                border-right: .2rem solid $gray;
+            }
+        }
+
+        &-btn {
+            display: none;
+
+            @include small-tablet {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                width: 8rem;
+                height: 8rem;
+
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                z-index: 102;
+                transition: all .5s;
+                flex-shrink: 0;
+
+
+            }
+
+            & span {
+                display: block;
+                width: 4rem;
+                height: 1px;
+                background-color: $white;
+                transition: all .5s;
+            }
+
+        }
+
+
+    }
+
+}
+
+.header-black {
+    & header {
+        & .header__c-logo {
+
+
+            & svg {
+                fill: $green;
+
+                & g>path:nth-child(2) {
+                    fill: $gray-main;
+                    stroke: $gray-main;
+                }
+            }
+        }
+
+        & .btn-header {
+
+            color: $black;
+
+            & svg {
+                stroke: $black;
+            }
+
+            &:hover {
+                background-color: $green;
+                color: $white ;
+
+
+                & svg {
+                    stroke: $white ;
+                }
+            }
+        }
+
+        & .header__c-btn span {
+            background-color: $black;
+        }
+    }
+}
+
+.header-mobile {
+
+    display: none;
+
+
+
+    @include small-tablet {
+        display: grid;
+        grid-template-columns: 100vw 3rem;
+        position: fixed;
+        z-index: 101;
+        width: calc(100vw + 3rem);
+        height: 100vh;
+        top: 0;
+        left: -100vw;
+
+
+        transition: transform .5s;
+
+        &._opened {
+            transform: translateX(100vw);
+        }
+    }
+
+    &-opener {
+        align-self: center;
+        width: 3rem;
+        height: 14rem;
+        background-color: $green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 1.4rem 1.4rem 0;
+
+    }
+
+    &-wrp {
+        overflow-y: auto;
+        height: 100%;
+        background-color: $bg;
+    }
+
+    &__self {
+        display: flex;
+        flex-direction: column;
+
+
+        height: 100%;
+        width: 100%;
+
+
+        &-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0;
+            width: 100%;
+            padding: 0 3rem;
+
+            &-logo {
+                width: 26rem;
+                height: 12rem;
+            }
+
+            &-closer {
+                width: 4.8rem;
+                height: 4.8rem;
+                background-image: url(./assets/images/icons/x-black.svg);
+                background-position: center;
+                background-size: 80%;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &-item {
+            padding: 6rem 3rem;
+            border-bottom: .2rem solid $gray;
+
+            &:last-of-type {
+                border: none;
+                text-align: center;
+                margin: 12rem auto 0;
+                padding: 0;
+                width: fit-content;
+            }
+        }
+
+        &-btns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+
+            &-e {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: .2rem solid $gray;
+                padding: 4rem 0;
+
+            }
+
+        }
+    }
+
+
+
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>само напишется</title>
+
+  <link rel="preload" href="./assets/fonts/Circe.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./assets/fonts/Forum.woff2" as="font" type="font/woff2" crossorigin="">
+  <style>
+    @font-face {
+        font-family: 'Circe';
+        src: local('Circe'),
+        url('./assets/fonts/Circe.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+
+    @font-face {
+        font-family: 'Forum';
+        src: local('Forum'),
+        url('./assets/fonts/Forum.woff2') format('woff2');
+
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+</style>
+</head>
+
+
+<body>
+    <div class="wrapper  main-swiper swiper">
+        <include src="./components/_header.html"></include>
+        <main class="swiper-wrapper">
+            <!--  -->
+            <section class="about-heading" data-anime-header="0">
+                <div class="ui-bg anime-height-bottom">
+                    <img src="./assets/images/about.png" alt="" class="anime-zoom" >
+                </div>
+                <div class="ui-line anime-width-right" data-anime-delay="1s" data-anime-speed="1s"></div>
+                <div class="container about-heading__c col-wh">
+                    <button class="btn-primary" data-modal="request">
+                        <span class="btn-primary-anchor">
+                            <span class="btn-primary-c">
+                                <span class="btn-primary-text col-wh anime-height-bottom" data-anime-trigger="2"
+                                    data-anime-delay="1s">
+                                    оставить <br />
+                                    заявку
+                                </span>
+                                <span class="ui-icon _arrow-white-right anime-height-top" data-anime-trigger="2" data-anime-delay="1s">
+                                </span>
+                            </span>
+                            <span class="btn-primary-circle anime-height-bottom" data-anime-trigger="2"
+                                data-anime-delay="1s"></span>
+                        </span>
+                    </button>
+                    <div class="tl1 txt-up anime-translate-top">
+                        <h1 class="anime-translate-t" data-anime-delay="1s">
+                            О нас
+                        </h1>
+                    </div>
+                    <div class="txt20 anime-translate-bottom">
+                        <p class="anime-translate-t" data-anime-delay="1s">
+                            Познакомьтесь с нашей командой дизайнеров и создайте свое идеальное пространство
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <include src="./components/_advantages.html"></include>
+            <!--  -->
+            <include src="./components/_message.html"></include>
+            <!--  -->
+            <section class="location" data-anime-states="2">
+                <div class="container">
+
+                    <p class="tl1 txt-up anime-height">
+                        Наша студия находится <br />
+                        в Санкт-Петербурге — <br />
+                        одном из самых красивых 
+                        городов мира
+                    </p>
+                    <div class="location__c">
+                        <div class="ui-line _black anime-width-right" data-anime-delay="1s" data-anime-speed="1s"></div>
+                        <button class="btn-primary _black">
+                            <span class="btn-primary-anchor">
+                                <span class="btn-primary-c">
+                                    <span class="btn-primary-text anime-height-bottom" data-anime-delay="1s">
+                                        связаться <br />
+                                        с руководством
+                                    </span>
+                                    <span class="ui-icon _arrow-black-right anime-height-top" data-anime-delay="1s">
+                                    </span>
+                                </span>
+                                <span class="btn-primary-circle anime-height-bottom" data-anime-delay="1s"></span>
+                            </span>
+                        </button>
+                        <div class="anime-translate-bottom">
+                            <p class="anime-translate-t txt14 txt-up location__c-year" data-anime-delay=".4s">
+                                Более 10 лет мы создаем вечноценные интерьеры, используя архитектурный подход в
+                                проектировании
+                                пространства
+                            </p>
+                        </div>
+                        <div class="location__c-small anime-height-bottom" data-anime-delay=".8s">
+                            <img src="./assets/images/location-s.png" alt="">
+                        </div>
+                        <div class="location__c-big anime-height-bottom" data-anime-delay=".8s">
+                            <img src="./assets/images/location-2.png" alt="">
+                        </div>
+                        <div class="anime-translate-bottom location__c-dnk">
+                            <p class="anime-translate-t txt20 _14" data-anime-delay=".4s">
+                                Современная мебель, хай-тек технологии, гипсовая лепнина - это ДНК нашего стиля.
+                                Благодаря врожденному
+                                чувству прекрасного, насмотренности, опыту
+                                и намеренному избеганию быстротечных трендов наши интерьеры не устаревают
+                                и производят неизгладимый wow-эффект
+                                с первого взгляда.
+                            </p>
+                        </div>
+                        <div class="anime-translate-bottom location__c-object" data-anime-trigger="2">
+                            <p class="anime-translate-t txt20 " data-anime-delay=".4s">
+                                Объекты с нашем дизайном высоко ценятся на рынке недвижимости, быстро продаются и
+                                являются
+                                инвестиционной
+                                ценностью, судя по отзывам наших клиентов
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!--  -->
+            <include src="./components/_our-specialists.html"></include>
+            <!--  -->
+            <include src="./components/_request-form.html"></include>
+            <!--  -->
+        </main>
+        <include src="./components/_footer.html"></include>
+    </div>
+
+
+</body>
+
+</html>

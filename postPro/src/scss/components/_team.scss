@@ -1,0 +1,237 @@
+.team {
+    position: relative;
+
+    & .gradient-bg {
+        top: 50%;
+        transform: translateY(-50%);
+        right: -20rem;
+
+    }
+
+    & .container {
+        position: relative;
+    }
+
+    &__pic {
+        position: absolute;
+        top: -21rem;
+        right: 0;
+        width: 29rem;
+        height: 36rem;
+        display: flex;
+
+        & img {
+            object-fit: contain;
+            transform: rotate(-15deg);
+        }
+    }
+
+    &__sub {
+        width: 77.8rem;
+        text-align: center;
+        font-family: Idealist Sans;
+        font-size: 2.2rem;
+        font-weight: 300;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        margin: auto;
+        margin-bottom: 5rem;
+
+        @include mobile {
+            font-size: 2.8rem;
+            max-width: 60rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6rem 20rem;
+
+        @include mobile {
+            gap: 6rem 4rem;
+        }
+
+        &-e {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            width: min-content;
+
+            &:first-of-type {
+                padding-left: 16rem;
+            }
+
+            &:nth-child(2) {
+                padding-right: 16rem;
+            }
+
+            @include mobile {
+                &:first-of-type {
+                    padding: 0 8rem;
+                }
+
+                &:nth-child(2) {
+                    padding: 0 8rem;
+                }
+
+                &:nth-child(3) {
+                    padding: 0 8rem;
+                }
+
+                &:nth-child(4) {
+                    padding: 0 8rem;
+                }
+
+                &:nth-child(5) {
+                    padding: 0 8rem;
+                }
+            }
+
+            &-border {
+                width: 25rem;
+                height: 25rem;
+                padding: 2rem;
+                border-radius: 50%;
+                display: flex;
+                backdrop-filter: blur(61px);
+                box-shadow: .8rem .8rem 3rem 0px rgba(0, 164, 131, 0.3) inset,
+                    -.9rem -1rem 5rem 0px rgba(197, 149, 255, 0.2) inset,
+                    3rem 3.2rem 10rem 0px rgba(23, 4, 43, 0.41);
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url(../assets/images/texture.webp);
+                    background-size: 14.5rem;
+                    z-index: -1;
+                    border-radius: 50%;
+                    opacity: .2;
+                }
+
+
+                @include mobile {
+                    width: 30rem;
+                    height: 30rem;
+                    padding: 3rem;
+                }
+
+
+                &-img {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+
+                    & img {
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+
+            &-ttl {
+                font-family: 'Esqadero FF CY 4F';
+                font-size: 2.2rem;
+                font-weight: 400;
+                line-height: 100%;
+                text-align: center;
+                white-space: nowrap;
+
+                @include mobile {
+                    font-size: 2.4rem;
+                }
+            }
+
+            &-sub {
+                font-family: Idealist Sans;
+                font-size: 1.6rem;
+                font-weight: 300;
+                line-height: 120%;
+                letter-spacing: 0.05em;
+                text-align: center;
+
+                @include mobile {
+                    font-size: 2.4rem;
+                }
+
+            }
+
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 10rem;
+        left: 0;
+
+        & div {
+            background-repeat: repeat-x;
+            background-size: contain;
+            width: 200%;
+            height: 100%;
+        }
+
+        &._top {
+            animation: bladerunner 55s infinite linear alternate;
+            top: 57%;
+
+            & div {
+                background-image: url(../assets/images/line-top.svg);
+            }
+        }
+
+        &._middle {
+
+            animation: bladerunner 65s infinite linear alternate;
+            top: 60%;
+
+            & div {
+                background-image: url(../assets/images/line-middle.svg);
+            }
+        }
+
+        &._bottom {
+
+            animation: bladerunnerRev 60s infinite linear alternate;
+            top: 62%;
+
+            & div {
+                background-image: url(../assets/images/line-bottom.svg);
+            }
+
+        }
+
+    }
+
+
+}
+
+@keyframes bladerunner {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translate(-101%);
+    }
+}
+
+@keyframes bladerunnerRev {
+    0% {
+        transform: translate(-99%);
+
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}

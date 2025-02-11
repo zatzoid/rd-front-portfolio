@@ -1,0 +1,150 @@
+// typography
+@import './typo';
+
+
+
+.col {
+    &-bl {
+        color: $black;
+    }
+
+    &-green {
+        color: $green;
+    }
+
+    &-purple {
+        color: $purple;
+    }
+}
+
+.txt {
+    &-up {
+        text-transform: uppercase;
+    }
+}
+
+.section-heading {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    font-family: 'Esqadero FF CY 4F';
+    font-size: 6.5rem;
+    font-weight: 400;
+    line-height: 110%;
+    text-align: left;
+    overflow: hidden;
+    margin-bottom: 7rem;
+   /*  border-left: 1px solid $green; */
+    padding: 2rem 0;
+
+    /*  padding-left: 2rem; */
+    @include mobile {
+        font-size: 5.6rem;
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;
+        margin-bottom: 6rem;
+
+    }
+
+    & h2 {
+
+        box-sizing: border-box;
+        text-transform: uppercase;
+        @include desktop{
+
+            &::after{
+                content: ' |';
+                color: $green;
+                animation: blink 1s infinite linear;
+            }
+        }
+
+        & span:nth-child(1) {
+            color: $green;
+         /*    background-image: $staticBg;
+            background-clip: text;
+            color: transparent; */
+        }
+    }
+
+
+
+
+}
+
+@keyframes heading {
+    0% {
+        transform: translateX(-105%);
+
+    }
+
+    100% {
+        transform: translateX(0);
+
+    }
+}
+
+.animate__heading {
+  /*   overflow: hidden;
+    white-space: nowrap;
+    animation-name: heading;
+    animation-duration: 1s;
+    animation-fill-mode: both; */
+}
+
+
+.gradient-border {
+    position: relative;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: -1px;
+        top: -1px;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        background-image: $staticBg;
+        border-radius: 1rem;
+
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 1px;
+        left: 1px;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        background-color: $bg;
+        border-radius: 1rem;
+
+    }
+}
+
+.gradient-bg {
+    z-index: -1;
+    position: absolute;
+    top: -10%;
+    right: 0%;
+    width: 100rem;
+    height: 100rem;
+    background: linear-gradient(129.47deg, rgba(14, 168, 133, 0.3) 7.71%, rgba(161, 66, 255, 0.3) 78.89%);
+    border-radius: 50%;
+    filter: blur(20rem);
+    opacity: 1;
+    @include mobile{
+        width: 80rem;
+        height: 80rem;
+        filter: blur(14rem);
+    }
+      /*  background-image: url(./assets/images/bg-gr.svg);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat; */
+    /*     background: linear-gradient(129.47deg, rgba(14, 168, 133, 0.15) 7.71%, rgba(161, 66, 255, 0.15) 78.89%);
+    box-shadow: 0px 0px 17rem 18rem $bg inset; */
+    /*  border-radius: 50%; */
+}

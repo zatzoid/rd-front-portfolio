@@ -1,0 +1,408 @@
+.achivments {
+
+
+    & .swiper {
+        position: relative;
+
+        & .swiper-btn {
+            position: absolute;
+            z-index: 10;
+            top: 15%;
+            height: 80%;
+            width: 20%;
+
+
+            &-prev {
+                left: 14%;
+                cursor: default;
+                /* cursor: url('../assets/images/cursor/left.ico'), default; */
+
+            }
+
+            &-next {
+                right: 14%;
+                cursor: default;
+
+               /*  cursor: url('../assets/images/cursor/right.ico'), default; */
+            }
+        }
+
+        @include desktop {
+            width: 100rem;
+        }
+
+    }
+
+    & .container {
+        position: relative;
+
+        @include mobile {
+            padding: 0;
+        }
+    }
+
+    &__eggs {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include desktop {
+            height: 72%;
+            top: 18rem;
+        }
+
+
+        &-list {
+
+            position: relative;
+            width: 68rem;
+            height: 100%;
+            transition: transform 1s linear;
+
+
+            &-el {
+                position: absolute;
+                width: 11rem;
+                height: 11rem;
+                filter: blur(5rem);
+                opacity: .7;
+
+                &._purple {
+                    background-color: $purple;
+                    top: 30%;
+                    left: 20%;
+                    animation: move1 12s infinite;
+                }
+
+                &._white {
+                    background-color: $white;
+                    top: 30%;
+                    left: calc(80% - 11rem);
+                    animation: move2 12s infinite;
+                }
+
+                &._green {
+                    background-color: $green;
+                    top: calc(90% - 11rem);
+                    left: calc(50% - 11rem);
+                    animation: move3 12s infinite;
+                }
+            }
+        }
+    }
+
+    &__pic {
+        position: absolute;
+        width: 22rem;
+        height: 23rem;
+        display: flex;
+        top: -14rem;
+        left: 0;
+        transform: rotate(13.5deg);
+
+        @include mobile {
+            width: 10rem;
+            height: 10rem;
+            top: -10rem;
+            left: calc(100% - 14rem);
+
+        }
+
+        & img {
+            object-fit: contain;
+
+        }
+    }
+
+    &__dot {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 6rem;
+        height: 6rem;
+        filter: blur(50px);
+        border-radius: 50%;
+
+        &._purple {
+            background-color: $purple;
+            top: 50%;
+            left: 50%;
+        }
+
+        &._green {
+            background-color: $green;
+            top: 60%;
+        }
+
+        &._white {
+            background-color: $white;
+            top: 70%;
+        }
+
+    }
+
+    &-item {
+        position: relative;
+        padding: 2px;
+        transition: padding 0s;
+        box-sizing: border-box;
+        transition: background-color 1s linear;
+        background-color: rgb(66 58 77 / 0%);
+        backdrop-filter: blur(30px);
+
+
+        & .gradient-border {
+
+            &::after {
+                border-radius: .8rem;
+                top: 2px;
+                left: 1px;
+                width: calc(100% - 3px);
+                height: calc(100% - 5px);
+                opacity: 0;
+                transition: opacity 1s linear;
+                background-color: transparent;
+                background-image: url(../assets/images/texture.webp);
+                background-size: 14rem;
+
+
+            }
+
+            &::before {
+                width: calc(100% + 4px);
+                height: calc(100% + 4px);
+                top: -2px;
+                left: -2px;
+                border-radius: 1rem;
+                opacity: 0;
+                transition: opacity 1s linear;
+                -webkit-mask-image: url('../assets/images/card-mask.svg');
+                mask-image: url('../assets/images/card-mask.svg');
+                mask-repeat: no-repeat;
+                mask-position: center;
+
+
+            }
+        }
+
+
+
+
+        &.swiper-slide-active {
+            background-color: rgb(66 58 77 / 7%);
+            border-radius: 10px;
+
+            & .achivments-item__c-ttl.col-green {
+                color: $green;
+            }
+
+            & .achivments-item__c-txt {
+                color: $purple;
+            }
+
+            & .achivments-item__c-img {
+                filter: grayscale(0);
+            }
+
+            & .gradient-border {
+
+                &::after {
+                    opacity: .1;
+                }
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+
+            & .achivments-item-light {
+                /*    opacity: 1;
+                &._green{
+                   
+                    animation: green 2s linear 1;
+                } */
+            }
+
+        }
+
+
+
+        &__c {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 46rem;
+            box-sizing: border-box;
+            padding: 3.7rem .7rem;
+            border-radius: .8rem;
+            position: relative;
+            z-index: 3;
+            transition: background-color 1s linear;
+
+
+            @include mobile {
+                padding: 1.6rem 1.6rem;
+            }
+
+            /*     &-bg {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                width: 25rem;
+                height: 25rem;
+                background-color: red;
+                background: radial-gradient(circle, rgba(8,0,255,1) 1%, rgba(8,0,255,0) 75%);
+            } */
+
+
+
+            & div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+            }
+
+            &-img {
+                width: 12rem;
+                height: 12rem;
+                display: flex;
+                filter: grayscale(1);
+                transition: filter 1s linear;
+
+                @include mobile {
+                    width: 10rem;
+                    height: 10rem;
+                }
+
+                & img {
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            &-ttl {
+                font-family: 'Esqadero FF CY 4F';
+                font-size: 2.2rem;
+                font-weight: 400;
+                line-height: 110%;
+                text-align: center;
+                color: rgba(255, 255, 255, 1);
+                transition: color 1s linear;
+
+                @include mobile {
+                    font-size: 2.2rem;
+                }
+            }
+
+            &-txt {
+                font-family: Idealist Sans;
+                font-size: 1.6rem;
+                font-weight: 300;
+                line-height: 120%;
+                letter-spacing: 0.05em;
+                text-align: center;
+                color: rgba(255, 255, 255, 1);
+                transition: color 1s linear;
+
+                @include mobile {
+                    font-size: 2.0rem;
+                }
+
+            }
+
+        }
+
+    }
+}
+
+@keyframes move1 {
+    0% {
+        top: 30%;
+        left: calc(80% - 11rem);
+    }
+
+    25% {
+        top: 30%;
+        left: 20%;
+
+    }
+
+    50% {
+        top: calc(90% - 11rem);
+        left: calc(50% - 11rem);
+    }
+
+
+
+    100% {
+        top: 30%;
+        left: calc(80% - 11rem);
+
+    }
+}
+
+@keyframes move2 {
+    0% {
+        top: 30%;
+        left: 20%;
+    }
+
+    25% {
+        top: calc(90% - 11rem);
+        left: calc(50% - 11rem);
+    }
+
+    50% {
+        top: 30%;
+        left: calc(80% - 11rem);
+    }
+
+
+
+    100% {
+        top: 30%;
+        left: 20%;
+    }
+}
+
+@keyframes move3 {
+    0% {
+        top: calc(90% - 11rem);
+        left: calc(50% - 11rem);
+    }
+
+    25% {
+        top: 30%;
+        left: calc(80% - 11rem);
+
+
+    }
+
+    50% {
+
+
+        top: 30%;
+        left: 20%;
+    }
+
+
+
+    100% {
+
+        top: calc(90% - 11rem);
+        left: calc(50% - 11rem);
+
+
+    }
+}

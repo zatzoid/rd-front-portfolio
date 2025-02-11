@@ -1,0 +1,175 @@
+.location {
+    position: relative;
+
+    @include mobile {
+        & .tl1 {
+            font-size: 5rem;
+        }
+
+        &[data-anime-state='1'] {
+            & .location__c {
+                grid-template-rows: auto 48rem 46rem;
+            }
+        }
+
+        &[data-anime-state='2'] {
+            & .location__c {
+                grid-template-rows: auto 0 26dvh;
+
+            }
+        }
+        &._detail{
+            & .location__c{
+                grid-template-areas:
+                'year btn'
+                'big big'
+                'dnk dnk'
+                'object object';
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 24rem 48rem auto auto;
+            }
+            &[data-anime-state='1'] {
+                & .location__c {
+                    grid-template-rows: 24rem 48rem auto auto;
+                }
+            }
+    
+            &[data-anime-state='2'] {
+                & .location__c {
+                    grid-template-rows: 0rem 48rem auto auto;
+    
+                }
+            }
+            & .location__c-small{
+                display: none;
+            }
+            & .location__c-year{
+                padding: 0;
+            }
+        }
+    }
+
+    &__c {
+        /*   height: 56rem;
+       max-height: 60dvh; */
+        margin-top: 5.6rem;
+        display: grid;
+        grid-template-columns: .35fr 1fr .5fr;
+        grid-template-rows: 13rem 18rem 10rem;
+        gap: 4.4rem;
+        grid-template-areas:
+            'year big btn'
+            'small big dnk'
+            'small big object';
+        position: relative;
+
+        & .ui-line {
+            top: 0;
+            left: 0;
+
+            @include mobile {
+                top: 25rem;
+            }
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            grid-auto-rows: auto;
+            gap: 0 3.2rem;
+            grid-template-areas:
+                'year btn'
+                'small dnk'
+                'big big'
+                'object object';
+            transition: grid .5s ease-in-out;
+
+
+        }
+
+        &-year {
+            grid-area: year;
+
+            @include desktop {
+                display: flex;
+                align-items: flex-end;
+                height: 100%;
+            }
+
+            @include mobile {
+                font-size: 2rem;
+                line-height: 2.8rem;
+                padding-bottom: 8rem;
+                margin-bottom: 6rem;
+            }
+        }
+
+        & .btn-primary {
+            grid-area: btn;
+            transform: translate(19rem, -21rem);
+            width: fit-content;
+
+            @include mobile {
+                transform: translate(15rem, -5rem);
+            }
+        }
+
+        &-small {
+            grid-area: small;
+            display: flex;
+            height: 100%;
+            @include desktop{
+                max-width: 70%;
+            }
+
+            @include mobile {
+                height: 100%;
+                max-height: unset;
+                overflow: hidden;
+                padding-bottom: 2rem;
+            }
+
+            & img {
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &-big {
+            grid-area: big;
+            display: flex;
+            height: 100%;
+            overflow: hidden;
+
+            @include mobile {
+                max-height: unset;
+               
+            }
+
+            & img {
+                object-fit: cover;
+            }
+        }
+
+        &-dnk {
+            grid-area: dnk;
+
+            @include mobile {
+                font-size: 2.8rem;
+                & p{
+                    padding: 0 0 2rem;
+                }
+            }
+        }
+
+        &-object {
+            grid-area: object;
+
+            @include mobile {
+                padding: 2rem 0;
+
+            }
+        }
+    }
+
+}

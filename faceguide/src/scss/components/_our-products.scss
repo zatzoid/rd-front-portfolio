@@ -1,0 +1,36 @@
+.our-products {
+
+    & .container{
+      
+        @include mobile{
+            padding: 0;
+        }
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3.2rem;
+        @include mobile{
+            padding: $mobilePadding;
+        }
+
+        & .swiper-nav {
+            display: flex;
+            gap: 3.2rem;
+        }
+
+        &>.txt20 {
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+        }
+    }
+
+    
+
+    & .btn-primary{
+       margin: 4rem 0 0rem;
+       margin-left: 50%;
+       transform: translateX(-50%);
+    }
+}

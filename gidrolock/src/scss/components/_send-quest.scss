@@ -1,0 +1,39 @@
+.send-quest {
+    margin-bottom: 11rem;
+    &__c {
+        &-top {
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+
+        }
+        &-form{
+            margin-top: 4rem;
+            display: grid;
+            grid-template-columns:42rem 42rem auto ;
+            grid-auto-rows: auto;
+            gap: 3.2rem;
+            @include small-tablet{
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            &-bottom{
+                grid-column: 1 / span 2;
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                @include small-tablet{
+                    grid-column: 1;
+                    flex-direction: column-reverse;
+                }
+            }
+            & .btn-primary{
+                @include mobile{
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,135 @@
+.switch-list {
+    display: grid;
+    grid-template-columns: 50rem auto;
+    gap: 3.2rem;
+    &._coding{
+        grid-template-columns: 1fr 1fr;
+        @include mobile{
+        grid-template-columns: 100%;
+        }
+    }
+
+    @include mobile {
+        grid-template-columns: 100%;
+    }
+
+    &-wrp {
+        @include mobile {
+            overflow: auto;
+            width: 100%;
+
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+
+        @include mobile {
+            flex-direction: row;
+
+            & button {
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    &__body {
+        overflow: hidden;
+        width: 100%;
+
+        &-list {
+            display: flex;
+            flex-wrap: nowrap;
+
+            &-e {
+                width: 100%;
+                flex-shrink: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 5rem;
+                &-text{
+                    padding: 3.2rem;
+                    border: 2px solid $blue-lighter;
+                    border-radius: 3rem;
+                }
+
+                &-drop {
+                    &-target {
+                        width: 100%;
+                        padding: 3.2rem;
+                        box-sizing: border-box;
+                        border-radius: 3rem;
+                        background-color: $blue-lighter;
+                        @include mobile {
+                            display: grid;
+                            grid-template-columns: auto min-content;
+                            grid-template-rows: min-content min-content;
+
+                            &-icon {
+                                grid-column: 2;
+                                grid-row: 2;
+
+                            }
+
+                            &-text {
+                                grid-column: 1;
+                                grid-row: 2;
+                            }
+
+                            &-sub {
+                                grid-column: 1 / span 2;
+                                grid-row: 1;
+
+                            }
+                        }
+                        &._price{
+                           
+                            & ._price{
+                                margin-left: auto;
+                                margin-right: 5rem;
+                            }
+                            @include mobile{
+                                & .switch-list__body-list-e-drop-target-text {
+                                    grid-column: 1 / span 2;
+                                    grid-row: 1;
+                                }
+    
+                                & .switch-list__body-list-e-drop-target-sub {
+                                    grid-column: 1 ;
+                                    grid-row: 2;
+    
+                                }
+                            }
+                           
+
+                        }
+
+                       
+                    }
+
+                    &-body {
+                        margin-top: 3.2rem;
+                        box-sizing: border-box;
+                        padding: 3.2rem;
+                        border-radius: 3rem;
+                        border: .1rem solid $blue-light;
+                        gap: 2rem;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                      
+
+
+                        
+                    }
+                }
+
+
+
+            }
+
+        }
+    }
+}

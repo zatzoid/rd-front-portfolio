@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>само напишется</title>
+
+    <link rel="preload" href="./assets/fonts/Circe.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="./assets/fonts/Forum.woff2" as="font" type="font/woff2" crossorigin="">
+    <style>
+        @font-face {
+            font-family: 'Circe';
+            src: local('Circe'),
+                url('./assets/fonts/Circe.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+        @font-face {
+            font-family: 'Forum';
+            src: local('Forum'),
+                url('./assets/fonts/Forum.woff2') format('woff2');
+
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="wrapper  main-swiper swiper">
+        <include src="./components/_header.html"></include>
+        <main class="swiper-wrapper">
+            <!--  -->
+            <section class="supervisor-heading">
+                <div class="ui-bg anime-height-bottom">
+                    <img src="./assets/images/supervisor.png" alt="" class="anime-zoom">
+                </div>
+                <div class="container supervisor-heading__c col-wh">
+
+                    <button class="btn-primary">
+                        <span class="btn-primary-anchor">
+                            <span class="btn-primary-c">
+                                <span class="btn-primary-text col-wh anime-height-bottom" data-anime-trigger="2"
+                                    data-anime-delay="1s">
+                                    оставить <br />
+                                    заявку
+                                </span>
+                                <span class="ui-icon _arrow-white-right anime-height-top" data-anime-trigger="2"
+                                    data-anime-delay="1s">
+                                </span>
+                            </span>
+                            <span class="btn-primary-circle anime-height-bottom" data-anime-trigger="2"
+                                data-anime-delay="1s"></span>
+                        </span>
+                    </button>
+                    <div class="tl1">
+                        <div class="ui-line anime-width-right" data-anime-delay="1s" data-anime-speed="1s"></div>
+                        <div class=" txt-up anime-translate-top">
+                            <h1 class="anime-translate-t" data-anime-delay="1s">
+                                авторский
+
+                                <br />
+                                надзор
+                            </h1>
+                        </div>
+                    </div>
+
+
+                    <div class="txt20 txt-up anime-translate-top supervisor-heading__c-top">
+                        <p class="anime-translate-t" data-anime-delay="1s">
+                            Полный контроль <br />
+                            над реализацией вашего <br />
+                            проекта
+                        </p>
+                    </div>
+
+                    <div class=" supervisor-heading__c-price">
+                        <div class="">
+                            <div class=" anime-translate-bottom">
+                                <p class="txt14 txt-up anime-translate-t" data-anime-delay="1s">
+                                    цена
+                                </p>
+                            </div>
+                            <div class=" anime-translate-bottom">
+                                <p class="anime-translate-t txt22" data-anime-delay="1s">
+                                    100 000 ₽ / месяц
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="txt20 anime-translate-bottom supervisor-heading__c-we">
+                        <p class="anime-translate-t" data-anime-delay="1s">
+                            Мы обеспечиваем постоянный контроль <br />
+                            за выполнением всех работ на объекте, <br />
+                            чтобы ваш проект был реализован в точности <br />
+                            с утверждённым дизайн-проектом.
+                        </p>
+                    </div>
+
+                    <div class="txt20 anime-translate-top supervisor-heading__c-idk desktop">
+                        <p class="anime-translate-t" data-anime-delay="1s">
+                            Наши специалисты следят за каждым этапом <br />
+                            строительства и отделки, оперативно решая <br />
+                            возникающие вопросы и гарантируя соответствие <br />
+                            высоким стандартам качества.
+                        </p>
+                    </div>
+
+
+
+                </div>
+            </section>
+            <!--  -->
+            <include src="./components/_advantages.html"></include>
+            <!--  -->
+            <include src="./components/_video.html"></include>
+            <!--  -->
+            <section class="supervisor-adv">
+                <div class="container">
+                    <button class="btn-primary _black " data-modal="request">
+                        <span class="btn-primary-anchor">
+                            <span class="btn-primary-c">
+                                <span class="btn-primary-text anime-height-top" data-anime-delay=".8s">
+                                    оставить <br />
+                                    заявку
+                                </span>
+                                <span class="ui-icon _arrow-black-right anime-height-bottom" data-anime-delay=".8s">
+                                </span>
+                            </span>
+                            <span class="btn-primary-circle anime-height-bottom" data-anime-delay=".5s"></span>
+                        </span>
+                    </button>
+                    <div class="ui-line _black anime-width-right"></div>
+                    <div class="swiper-nav anime-height-top">
+                        <button class="swiper-btn swiper-btn-prev"></button>
+                        <button class="swiper-btn swiper-btn-next"></button>
+                    </div>
+                    <div class="supervisor-adv__top">
+                        <div class="txt22 txt-up anime-translate-top">
+                            <p class=" anime-translate-t">преимущества работы с нами</p>
+                        </div>
+                        <div class="tl1 txt-up anime-height-bottom">
+                            <p class="anime-translate-t">
+                                Премиальный сервис <br />
+                                с заботой о вас
+                            </p>
+                        </div>
+                    </div>
+                    <div class="supervisor-adv__sliders">
+                        <!-- !!!!!!!!! -->
+                        <!-- рендери 1 слайдер два раза, это надо для десктопа -->
+                        <!-- они одинаковые, и должны быть с одинаковым контентом -->
+                        <!-- но не забудь про .desktop на втором слайдере иначе будет пизда на мобиле -->
+                        <!-- !!!!!!!!! -->
+                        <div class=" swiper  swiper-clip">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide supervisor-adv__sliders-el">
+                                    <div class="supervisor-adv__sliders-el-text  swiper-clip _clip-bottom">
+                                        <p
+                                            class="supervisor-adv__sliders-el-text-count anime-height-top  txt14 col-black40">
+                                            само
+                                            напишется</p>
+                                        <p class="tl3 txt-up anime-height-top ">
+                                            Проект <br />
+                                            реализовывается <br />
+                                            в рамках изначальной задумки
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="supervisor-adv__sliders-el-img swiper-clip _clip-bottom anime-height-bottom">
+                                        <img class="anime-height-bottom" src="./assets/images/supervisor-adv-1.png"
+                                            alt="">
+                                    </div>
+                                </li>
+                                <li class="swiper-slide supervisor-adv__sliders-el">
+                                    <div class="supervisor-adv__sliders-el-text swiper-clip _clip-bottom">
+                                        <p
+                                            class="supervisor-adv__sliders-el-text-count anime-height-top txt14 col-black40">
+                                            само
+                                            напишется</p>
+                                        <p class="tl3 txt-up anime-height-top">
+                                            оперативное исправление
+                                            деффектов ремонта
+                                        </p>
+                                    </div>
+                                    <div class="supervisor-adv__sliders-el-img swiper-clip _clip-bottom">
+                                        <img src="./assets/images/supervisor-adv-2.png" alt="">
+                                    </div>
+                                </li>
+                                <li class="swiper-slide supervisor-adv__sliders-el">
+                                    <div class="supervisor-adv__sliders-el-text swiper-clip _clip-bottom">
+                                        <p
+                                            class="supervisor-adv__sliders-el-text-count anime-height-top  txt14 col-black40">
+                                            само
+                                            напишется</p>
+                                        <p class="tl3 txt-up  anime-height-top">
+                                            Возможность <br />
+                                            внесения изменений <br />
+                                            и улучшений <br />
+                                            в процессе
+                                        </p>
+                                    </div>
+                                    <div class="supervisor-adv__sliders-el-img swiper-clip _clip-bottom">
+                                        <img src="./assets/images/supervisor-adv-3.png" alt="">
+                                    </div>
+                                </li>
+                                <li class="swiper-slide supervisor-adv__sliders-el">
+                                    <div class="supervisor-adv__sliders-el-text swiper-clip _clip-bottom">
+                                        <p
+                                            class="supervisor-adv__sliders-el-text-count anime-height-top  txt14 col-black40">
+                                            само
+                                            напишется</p>
+                                        <p class="tl3 txt-up anime-height-top ">
+                                            Минимизирован <br />
+                                            риск грубой ошибки
+                                        </p>
+                                    </div>
+                                    <div class="supervisor-adv__sliders-el-img swiper-clip _clip-bottom">
+                                        <img src="./assets/images/supervisor-adv-4.png" alt="">
+                                    </div>
+                                </li>
+                                <li class="swiper-slide supervisor-adv__sliders-el">
+                                    <div class="supervisor-adv__sliders-el-text swiper-clip _clip-bottom ">
+                                        <p
+                                            class="supervisor-adv__sliders-el-text-count anime-height-top txt14 col-black40">
+                                            само
+                                            напишется</p>
+                                        <p class="tl3 txt-up anime-height-top">
+                                            уверенность, <br />
+                                            что проект находится <br />
+                                            в надёжных руках профессионалов
+                                        </p>
+                                    </div>
+                                    <div class="supervisor-adv__sliders-el-img swiper-clip _clip-bottom">
+                                        <img class="anime-height-bottom" src="./assets/images/supervisor-adv-5.png"
+                                            alt="">
+                                    </div>
+                                </li>
+                                <li class="swiper-slide supervisor-adv__sliders-el">
+                                    <div
+                                        class="supervisor-adv__sliders-el-text  anime-height-top swiper-clip _clip-bottom">
+                                        <p
+                                            class="supervisor-adv__sliders-el-text-count anime-height-top  txt14 col-black40">
+                                            само
+                                            напишется</p>
+                                        <p class="tl3 txt-up anime-height-top ">
+                                            освобождаем вас <br />
+                                            от необходимости постоянного контроля
+                                        </p>
+                                    </div>
+                                    <div class="supervisor-adv__sliders-el-img swiper-clip _clip-bottom">
+                                        <img class="anime-height-bottom" src="./assets/images/supervisor-adv-6.png"
+                                            alt="">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class=" swiper  swiper-clip desktop">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide supervisor-adv__sliders-el">
+                                    <div class="supervisor-adv__sliders-el-text  swiper-clip _clip-bottom">
+                                        <p
+                                            class="supervisor-adv__sliders-el-text-count anime-height-top  txt14 col-black40">
+                                            само
+                                            напишется</p>
+                                        <p class="tl3 txt-up anime-height-top ">
+                                            Проект <br />
+                                            реализовывается <br />
+                                            в рамках изначальной задумки
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="supervisor-adv__sliders-el-img swiper-clip _clip-bottom anime-height-bottom">
+                                        <img class="anime-height-bottom" src="./assets/images/supervisor-adv-1.png"
+                                            alt="">
+                                    </div>
+                                </li>
+                                <li class="swiper-slide supervisor-adv__sliders-el">
+                                    <div class="supervisor-adv__sliders-el-text swiper-clip _clip-bottom">
+                                        <p
+                                            class="supervisor-adv__sliders-el-text-count anime-height-top txt14 col-black40">
+                                            само
+                                            напишется</p>
+                                        <p class="tl3 txt-up anime-height-top">
+                                            оперативное исправление
+                                            деффектов ремонта
+                                        </p>
+                                    </div>
+                                    <div class="supervisor-adv__sliders-el-img swiper-clip _clip-bottom">
+                                        <img src="./assets/images/supervisor-adv-2.png" alt="">
+                                    </div>
+                                </li>
+                                <li class="swiper-slide supervisor-adv__sliders-el">
+                                    <div class="supervisor-adv__sliders-el-text swiper-clip _clip-bottom">
+                                        <p
+                                            class="supervisor-adv__sliders-el-text-count anime-height-top  txt14 col-black40">
+                                            само
+                                            напишется</p>
+                                        <p class="tl3 txt-up  anime-height-top">
+                                            Возможность <br />
+                                            внесения изменений <br />
+                                            и улучшений <br />
+                                            в процессе
+                                        </p>
+                                    </div>
+                                    <div class="supervisor-adv__sliders-el-img swiper-clip _clip-bottom">
+                                        <img src="./assets/images/supervisor-adv-3.png" alt="">
+                                    </div>
+                                </li>
+                                <li class="swiper-slide supervisor-adv__sliders-el">
+                                    <div class="supervisor-adv__sliders-el-text swiper-clip _clip-bottom">
+                                        <p
+                                            class="supervisor-adv__sliders-el-text-count anime-height-top  txt14 col-black40">
+                                            само
+                                            напишется</p>
+                                        <p class="tl3 txt-up anime-height-top ">
+                                            Минимизирован <br />
+                                            риск грубой ошибки
+                                        </p>
+                                    </div>
+                                    <div class="supervisor-adv__sliders-el-img swiper-clip _clip-bottom">
+                                        <img src="./assets/images/supervisor-adv-4.png" alt="">
+                                    </div>
+                                </li>
+                                <li class="swiper-slide supervisor-adv__sliders-el">
+                                    <div class="supervisor-adv__sliders-el-text swiper-clip _clip-bottom ">
+                                        <p
+                                            class="supervisor-adv__sliders-el-text-count anime-height-top txt14 col-black40">
+                                            само
+                                            напишется</p>
+                                        <p class="tl3 txt-up anime-height-top">
+                                            уверенность, <br />
+                                            что проект находится <br />
+                                            в надёжных руках профессионалов
+                                        </p>
+                                    </div>
+                                    <div class="supervisor-adv__sliders-el-img swiper-clip _clip-bottom">
+                                        <img class="anime-height-bottom" src="./assets/images/supervisor-adv-5.png"
+                                            alt="">
+                                    </div>
+                                </li>
+                                <li class="swiper-slide supervisor-adv__sliders-el">
+                                    <div
+                                        class="supervisor-adv__sliders-el-text  anime-height-top swiper-clip _clip-bottom">
+                                        <p
+                                            class="supervisor-adv__sliders-el-text-count anime-height-top  txt14 col-black40">
+                                            само
+                                            напишется</p>
+                                        <p class="tl3 txt-up anime-height-top ">
+                                            освобождаем вас <br />
+                                            от необходимости постоянного контроля
+                                        </p>
+                                    </div>
+                                    <div class="supervisor-adv__sliders-el-img swiper-clip _clip-bottom">
+                                        <img class="anime-height-bottom" src="./assets/images/supervisor-adv-6.png"
+                                            alt="">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!--  -->
+            <include src="./components/_our-projects.html"></include>
+            <!--  -->
+            <section class="supervisor-joke">
+                <div class="container supervisor-joke__c txt22 txt-up">
+                    <div class="supervisor-joke__c-top">
+                        <div class=" anime-translate-top">
+                            <p class="anime-translate-t">при авторском надзоре студия <span class="col-black40"> не
+                                    несет</span></p>
+                        </div>
+                        <div class=" anime-translate-top">
+                            <p class="col-black40 anime-translate-t" data-anime-delay=".2s">ответственности за качество
+                                ремонтных</p>
+                        </div>
+                        <div class=" anime-translate-top">
+                            <p class="anime-translate-t" data-anime-delay=".3s"><span class="col-black40">и инженерных
+                                    работ, но</span>
+                                проинформирует</p>
+                        </div>
+                        <div class=" anime-translate-top">
+                            <p class="col-black40 anime-translate-t" data-anime-delay=".4s">клиента в случае обнаружения
+                                нарушения</p>
+                        </div>
+                        <div class=" anime-translate-top">
+                            <p class="anime-translate-t anime-translate-t" data-anime-delay=".5s">технологий или
+                                качества</p>
+                        </div>
+                    </div>
+                    <div class="supervisor-joke__c-bottom">
+                        <div class="anime-translate-top">
+                            <p class="anime-translate-t" data-anime-delay=".6s">Авторский надзор <span
+                                    class="col-black40"> не равно</span> технический</p>
+                        </div>
+                        <div class="anime-translate-top">
+                            <p class="anime-translate-t" data-anime-delay=".7s">надзор. Технический надзор может быть
+                            </p>
+                        </div>
+                        <div class="anime-translate-top">
+                            <p class="anime-translate-t" data-anime-delay=".8s">организован <span class="col-black40">
+                                    дополнительно</span></p>
+                        </div>
+                        <div class="anime-translate-top">
+                            <p class="anime-translate-t" data-anime-delay=".9s">технологий или качества</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <include src="./components/_faq.html"></include>
+            <!--  -->
+            <include src="./components/_our-services.html"></include>
+            <!--  -->
+            <include src="./components/_request-form.html"></include>
+            <!--  -->
+        </main>
+        <include src="./components/_footer.html"></include>
+    </div>
+
+
+</body>
+
+</html>

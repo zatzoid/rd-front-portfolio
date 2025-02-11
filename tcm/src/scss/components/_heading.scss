@@ -1,0 +1,52 @@
+.heading {
+    padding-top: 0 !important;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    &__c {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+
+        &-top {
+
+            max-width: 90rem;
+            text-transform: uppercase;
+
+            &-main {
+                @include mobile {
+                    & .tl1{
+                        font-size: 8.4rem;
+                    }
+                   
+                }
+            }
+        }
+
+        &-bottom {
+            margin-top: 28rem;
+            margin-left: auto;
+            width: fit-content;
+
+            @include small-tablet {
+                margin-top: 63rem;
+                margin-left: 0;
+            }
+
+            & p {
+
+                font-weight: 600;
+
+                @include desktop {
+                    max-width: 42rem;
+                }
+
+                @include small-tablet {
+                    font-size: 3rem;
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>само напишется</title>
+
+  <link rel="preload" href="./assets/fonts/Circe.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./assets/fonts/Forum.woff2" as="font" type="font/woff2" crossorigin="">
+  <style>
+    @font-face {
+        font-family: 'Circe';
+        src: local('Circe'),
+        url('./assets/fonts/Circe.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+
+    @font-face {
+        font-family: 'Forum';
+        src: local('Forum'),
+        url('./assets/fonts/Forum.woff2') format('woff2');
+
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+</style>
+</head>
+
+<body>
+    <div class="wrapper  main-swiper swiper">
+        <include src="./components/_header.html"></include>
+        <main class="swiper-wrapper">
+            <!--  -->
+            <section class="prices-heading" data-anime-header="0">
+                <div class="ui-bg anime-height-bottom">
+                    <img src="./assets/images/prices.png" alt="" class="anime-zoom">
+                </div>
+                <div class="container prices-heading__c col-wh">
+                    <div class="ui-line anime-width-right" data-anime-delay="1s" data-anime-speed="1s"></div>
+                    <button class="btn-primary" data-modal="request">
+                        <span class="btn-primary-anchor">
+                            <span class="btn-primary-c">
+                                <span class="btn-primary-text col-wh anime-height-bottom" data-anime-trigger="2"
+                                    data-anime-delay="1s">
+                                    оставить <br />
+                                    заявку
+                                </span>
+                                <span class="ui-icon _arrow-white-right anime-height-top" data-anime-trigger="2"
+                                    data-anime-delay="1s">
+
+                                </span>
+                            </span>
+                            <span class="btn-primary-circle anime-height-bottom" data-anime-trigger="2"
+                                data-anime-delay="1s"></span>
+                        </span>
+                    </button>
+                    <div class="tl1 txt-up anime-translate-top">
+                        <h1 class="anime-translate-t" data-anime-delay="1s">
+                            цены
+                        </h1>
+                    </div>
+
+                    <div class="txt20 anime-translate-bottom">
+                        <p class="anime-translate-t" data-anime-delay="1s">
+                            Познакомьтесь с нашими <br class="mobile" /> ценами, и создайте свое <br />
+                            идеальное пространство
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+            <!--  -->
+            <section class="prices-grid" data-anime-states="3">
+                <div class="container">
+                    <div class="prices-grid__top tl1 txt-up anime-translate-top">
+                        <p class=" anime-translate-t">стоимость Дизайна интерьера</p>
+                    </div>
+                    <div class="ui-line anime-width-right _black mobile"></div>
+                    <ul class="prices-grid__c">
+                        <li class="prices-grid__c-el">
+                            <div class="anime-translate-top prices-grid__c-el-item" data-anime-trigger="1">
+                                <p class="tl3 txt-up anime-translate-t">Планировка</p>
+                            </div>
+                            <div class="anime-translate-bottom prices-grid__c-el-item" data-anime-trigger="1">
+                                <p class="txt20 anime-translate-t">7 000 ₽ / m <sup>2</sup></p>
+                            </div>
+                            <div class="ui-line _relative _black anime-width-right "></div>
+
+                            <ul class="ui-list txt22 anime-translate-right prices-grid__c-el-item"
+                                data-anime-trigger="1">
+                                <li class="anime-translate-t" data-anime-delay=".3s" data-anime-trigger="1">
+                                    Обмер
+                                </li>
+                                <li class="anime-translate-t" data-anime-delay=".4s" data-anime-trigger="1">
+                                    Планировки <br />
+                                    с расстановкой мебели
+                                </li>
+                                <li class="anime-translate-t" data-anime-delay=".5s" data-anime-trigger="1">До 3-х
+                                    вариантов</li>
+                            </ul>
+
+                            <div class="anime-translate-bottom prices-grid__c-el-item" data-anime-trigger="1">
+                                <div class="anime-translate-t" data-anime-delay=".5s">
+                                    <a href="" class="ui-download txt14 txt-up ">
+                                        скачать пример
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="prices-grid__c-el-img anime-height-top" data-anime-trigger="1">
+                                <img src="./assets/images/prices-grid-1.png" alt="">
+                            </div>
+                        </li>
+                        <li class="prices-grid__c-el">
+                            <div class="anime-translate-top prices-grid__c-el-item" data-anime-trigger="2">
+                                <p class="tl3 txt-up anime-translate-t">дизайн-проект</p>
+                            </div>
+                            <div class="anime-translate-bottom prices-grid__c-el-item" data-anime-trigger="2">
+                                <p class="txt20 anime-translate-t">7 000 ₽ / m <sup>2</sup></p>
+                            </div>
+                            <div class="ui-line _relative _black anime-width-right"></div>
+                            <ul class="ui-list txt22 anime-translate-right prices-grid__c-el-item"
+                                data-anime-trigger="2">
+                                <li class="anime-translate-t" data-anime-delay=".3s" data-anime-trigger="2">Планировки
+                                </li>
+                                <li class="anime-translate-t" data-anime-delay=".4s" data-anime-trigger="2">
+                                    Визуализации
+                                </li>
+                                <li class="anime-translate-t" data-anime-delay=".5s" data-anime-trigger="2">Чертежи</li>
+                                <li class="anime-translate-t" data-anime-delay=".6s" data-anime-trigger="2">Ведомости
+                                    отделки <span class="col-black40">(без подбора)</span></li>
+                            </ul>
+
+                            <div class="anime-translate-bottom prices-grid__c-el-item" data-anime-trigger="2">
+                                <p class="txt20 anime-translate-t">
+                                    Комплектация и авторский надзор <br />
+                                    заказываются отдельно
+                                </p>
+                            </div>
+                            <div class="prices-grid__c-el-img anime-height-top" data-anime-trigger="2">
+                                <img src="./assets/images/prices-grid-2.png" alt="">
+                            </div>
+                        </li>
+                        <li class="prices-grid__c-el">
+                            <div class="anime-translate-top prices-grid__c-el-item" data-anime-trigger="3">
+                                <p class="tl3 txt-up anime-translate-t">Проект и реализация под ключ</p>
+                            </div>
+                            <div class="anime-translate-bottom prices-grid__c-el-item" data-anime-trigger="3">
+                                <p class="txt20 anime-translate-t">7 000 ₽ / m <sup>2</sup></p>
+                            </div>
+                            <div class="ui-line _relative _black anime-width-right"></div>
+                            <ul class="ui-list txt22 anime-translate-right prices-grid__c-el-item"
+                                data-anime-trigger="3">
+                                <li class="anime-translate-t" data-anime-delay=".3s" data-anime-trigger="3">
+                                    Дизайн-проект</li>
+                                <li class="anime-translate-t" data-anime-delay=".4s" data-anime-trigger="3">
+                                    Авторский надзор
+                                </li>
+                                <li class="anime-translate-t" data-anime-delay=".5s" data-anime-trigger="3">Комплектация
+                                </li>
+                                <li class="anime-translate-t" data-anime-delay=".6s" data-anime-trigger="3">Комплектация
+                                    и авторский надзор на
+                                    весь
+                                    срок ремонта*</li>
+                            </ul>
+                            <div class="anime-translate-bottom prices-grid__c-el-item" data-anime-trigger="3">
+                                <p class="txt20 anime-translate-t">
+                                    * срок рассчитывается индивидуально
+                                </p>
+                            </div>
+                            <div class="prices-grid__c-el-img anime-height-top" data-anime-trigger="3">
+                                <img src="./assets/images/prices-grid-3.png" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!--  -->
+            <section class="banner _complects _rev">
+                <div class="container banner__c">
+                    <div class="ui-line _black anime-width-right" data-anime-delay="1s"></div>
+
+                    <div class="banner__c-body">
+                        <div class="tl1 txt-up txt-up anime-translate-top">
+                            <p class="anime-translate-t">
+                                Стоимость <br />
+                                авторского <br />
+                                надзора
+                            </p>
+                        </div>
+                        <div class=" txt22 txt-up">
+                            <div class="anime-translate-top">
+                                <p class="anime-translate-t" data-anime-delay="1s">
+                                    от 120 000 ₽ / месяц
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="banner__c-body-footer">
+                            <div class="txt22 txt-up anime-translate-bottom">
+                                <p class="anime-translate-t" data-anime-delay="1.5s">
+                                    Полный контроль <br />
+                                    над реализацией вашего проекта
+                                </p>
+                            </div>
+
+
+                            <a href="#" class=" btn-primary _black">
+                                <span class="btn-primary-anchor">
+                                    <span class="btn-primary-c">
+                                        <span class="btn-primary-text anime-height-bottom" data-anime-delay="1s">
+                                            ознакомиться <br />
+                                            с услугой
+                                        </span>
+                                        <span class="ui-icon _arrow-black-right anime-height-top" data-anime-delay="1s">
+                                        </span>
+                                    </span>
+                                    <span class="btn-primary-circle anime-height-bottom" data-anime-delay="1s"></span>
+                                </span>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="banner__c-left">
+                        <div class="banner__c-img anime-height-top">
+                            <img src="./assets/images/prices-banner.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <section class="banner _complects _price">
+                <div class="container banner__c">
+                    <div class="ui-line _black anime-width-right" data-anime-delay="1s"></div>
+                    <div class="banner__c-left">
+                        <div class="banner__c-img anime-height-top">
+                            <img src="./assets/images/prices-banner-2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="banner__c-body">
+                        <div class="tl1 txt-up txt-up anime-translate-top">
+                            <p class="anime-translate-t">
+                                Стоимость <br />
+                                комплектации
+                            </p>
+                        </div>
+                        <div class=" txt22 txt-up">
+                            <div class="anime-translate-top">
+                                <p class="anime-translate-t" data-anime-delay="1s">10%</p>
+                            </div>
+                            <div class="anime-translate-top">
+                                <p class="anime-translate-t" data-anime-delay="1s">
+                                    от общей сметы <br />
+                                    на материалы мебель <br />
+                                    и отделку
+                                </p>
+                            </div>
+                        </div>
+                        <div class="banner__c-body-footer ">
+                            <div class="txt16 anime-translate-bottom">
+                                <p class="anime-translate-t" data-anime-delay="1.5s">
+                                    Услуга предоставляется только <br />
+                                    при заказе «Авторского надзора»
+                                </p>
+                            </div>
+                            <div class="txt16 anime-translate-bottom">
+                                <p class="anime-translate-t" data-anime-delay="1.5s">
+                                    Все цены зависят от текущих условий <br />
+                                    на рынке, курсов валют и других факторов.
+                                </p>
+                            </div>
+
+
+                            <a href="#" class=" btn-primary _black">
+                                <span class="btn-primary-anchor">
+                                    <span class="btn-primary-c">
+                                        <span class="btn-primary-text anime-height-bottom" data-anime-delay="1s">
+                                            ознакомиться <br />
+                                            с услугой
+                                        </span>
+                                        <span class="ui-icon _arrow-black-right anime-height-top" data-anime-delay="1s">
+                                        </span>
+                                    </span>
+                                    <span class="btn-primary-circle anime-height-bottom" data-anime-delay="1s"></span>
+                                </span>
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <section class="prices-grid" data-anime-states="3">
+                <div class="container">
+                    <div class="prices-grid__top tl1 txt-up anime-translate-top">
+                        <p class=" anime-translate-t">стоимость архитектуры</p>
+                    </div>
+                    <ul class="prices-grid__c">
+                        <li class="prices-grid__c-el">
+                            <div class="anime-translate-top prices-grid__c-el-item" data-anime-trigger="1">
+                                <p class="tl3 txt-up anime-translate-t">Консультация по выбору участка</p>
+                            </div>
+                            <div class="anime-translate-bottom prices-grid__c-el-item" data-anime-trigger="1">
+                                <p class="txt20 anime-translate-t">7 000 ₽ / m <sup>2</sup></p>
+                            </div>
+                            <div class="ui-line _relative _black anime-width-right "></div>
+                            <ul class="ui-list txt22 anime-translate-right prices-grid__c-el-item"
+                                data-anime-trigger="1">
+                                <li class="anime-translate-t" data-anime-delay=".3s" data-anime-trigger="1">
+                                    До 3-х участков
+                                </li>
+                                <li class="anime-translate-t" data-anime-delay=".4s" data-anime-trigger="1">
+                                    Выезд в один день
+                                </li>
+                                <li class="anime-translate-t" data-anime-delay=".5s" data-anime-trigger="1">До 3-х
+                                    Входит схематичный план участка с домом <br />
+                                    и доп. постройками
+                                </li>
+                            </ul>
+                            <div class="prices-grid__c-el-img anime-height-top" data-anime-trigger="1">
+                                <img src="./assets/images/prices-grid-2-1.png" alt="">
+                            </div>
+                        </li>
+                        <li class="prices-grid__c-el">
+                            <div class="anime-translate-top prices-grid__c-el-item" data-anime-trigger="2">
+                                <p class="tl3 txt-up anime-translate-t">Эскизный проект</p>
+                            </div>
+                            <div class="anime-translate-bottom prices-grid__c-el-item" data-anime-trigger="2">
+                                <p class="txt20 anime-translate-t">7 000 ₽ / m <sup>2</sup></p>
+                            </div>
+                            <div class="ui-line _relative _black anime-width-right"></div>
+                            <ul class="ui-list txt22 anime-translate-right prices-grid__c-el-item"
+                                data-anime-trigger="2">
+                                <li class="anime-translate-t" data-anime-delay=".3s" data-anime-trigger="2">
+                                    Разработка схемы генерального плана участка
+                                </li>
+                                <li class="anime-translate-t" data-anime-delay=".4s" data-anime-trigger="2">
+                                    Планировка всех этажей
+                                </li>
+                                <li class="anime-translate-t" data-anime-delay=".5s" data-anime-trigger="2">
+                                    Визуализация экстерьера
+                                </li>
+                                <li class="anime-translate-t" data-anime-delay=".6s" data-anime-trigger="2">
+                                    Альбом чертежей фасадов, планов этажей, кровли, лестничных разрезов и других
+                                    технических документов для проектной организации
+                                </li>
+                            </ul>
+                            <div class="prices-grid__c-el-img anime-height-top" data-anime-trigger="2">
+                                <img src="./assets/images/prices-grid-2-2.png" alt="">
+                            </div>
+                        </li>
+                        <li class="prices-grid__c-el">
+                            <div class="anime-translate-top prices-grid__c-el-item" data-anime-trigger="3">
+                                <p class="tl3 txt-up anime-translate-t">Проект и реализация под ключ</p>
+                            </div>
+                            <div class="anime-translate-bottom prices-grid__c-el-item" data-anime-trigger="3">
+                                <p class="txt20 anime-translate-t">7 000 ₽ / m <sup>2</sup></p>
+                            </div>
+                            <div class="ui-line _relative _black anime-width-right"></div>
+                            <div class=" txt22 anime-translate-right prices-grid__c-el-item" data-anime-trigger="3"
+                                data-anime-delay=".3s">
+                                <p class="anime-translate-t">
+                                    Мы сопровождаем проектирование инженерии, конструктива, ландшафта, строительство
+                                    объекта
+                                </p>
+                            </div>
+                            <div class="prices-grid__c-el-img anime-height-top" data-anime-trigger="3">
+                                <img src="./assets/images/prices-grid-2-3.png" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!--  -->
+            <include src="./components/_request-form.html"></include>
+            <!--  -->
+        </main>
+        <include src="./components/_footer.html"></include>
+    </div>
+
+
+</body>
+
+</html>

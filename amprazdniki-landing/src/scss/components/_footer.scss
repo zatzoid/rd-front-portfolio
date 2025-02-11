@@ -1,0 +1,84 @@
+.footer {
+	background-color: $gray;
+	padding: 16rem 0 9rem;
+
+	& .container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 8rem;
+
+		& .tl2 {
+			@include mobile {
+				text-align: center;
+			}
+		}
+	}
+
+	&__form {
+		display: grid;
+		grid-template-columns: 30rem 30rem auto;
+		gap: 6rem;
+		justify-content: center;
+		align-items: flex-end;
+
+		@include mobile {
+			grid-template-columns: 100%;
+			& label {
+				width: 48rem;
+				margin: auto;
+			}
+		}
+
+		
+	
+
+	}
+
+	&__bottom {
+		display: flex;
+		
+		justify-content: space-between;
+		width: 100%;
+		margin-top: 8rem;
+		@include mobile{
+			flex-direction: column;
+			gap: 3rem;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&-logo {
+			width: 22.7rem;
+			display: flex;
+			@include mobile{
+				width: 100%;
+			}
+
+			& img {
+				object-fit: contain;
+				@include mobile{
+					width: 32rem;
+					margin: auto;
+				}
+			}
+		}
+
+		&-row {
+			display: flex;
+			gap: 2rem;
+			@include mobile{
+				gap: 4rem;
+			}
+		}
+
+		&-social {
+			width: 4rem;
+			height: 4rem;
+			@include mobile{
+				width: 8rem;
+				height: 8rem;
+			}
+		}
+	}
+}

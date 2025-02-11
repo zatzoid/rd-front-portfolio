@@ -1,0 +1,175 @@
+// typography
+@import './typo';
+/*  */
+@import './btns';
+/*  */
+@import './input';
+/*  */
+@import './anime';
+/*  */
+@import './section';
+
+/*  */
+.ui {
+    &-icon {
+        width: 3.2rem;
+        height: 3.2rem;
+        display: flex;
+        flex-shrink: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include mobile {
+            width: 4.8rem;
+            height: 4.8rem;
+        }
+
+        & img,
+        & svg {
+            object-fit: contain;
+            object-position: center;
+        }
+
+        &._arrow {
+
+
+            &-black {
+                &-right {
+                    background-image: url(../assets/images/icons/arrow-right-black.svg);
+                }
+
+            }
+
+            &-white {
+                &-right {
+                    background-image: url(../assets/images/icons/arrow-right-white.svg);
+                }
+
+            }
+        }
+    }
+
+    &-line {
+        background-color: rgba(255, 254, 248, 0.3);
+        height: 1px;
+        position: absolute;
+        width: 100vw;
+        margin-left: 50%;
+        transform: translateX(-50%);
+
+        &._black {
+            background-color: $black16;
+
+        }
+
+        &._relative {
+            position: relative;
+            width: 100%;
+            margin-left: 0;
+            transform: translateX(0);
+        }
+
+    }
+
+    &-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        & img {
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.14);
+        }
+    }
+
+    &-marked-list {
+        & li {
+            list-style: disc;
+            list-style-position: inside;
+
+            &::marker {
+                color: $black40;
+            }
+        }
+    }
+
+    &-count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 7.4rem;
+        height: 7.4rem;
+        border-radius: 50%;
+        border: 1px solid $black16;
+        //styleName: circe 14 12% 140%;
+        font-family: Circe;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.12em;
+        flex-shrink: 0;
+
+        @include mobile {
+            width: 8rem;
+            height: 8rem;
+            font-size: 2.6rem;
+        }
+
+    }
+
+    &-list {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+        padding-left: 2rem;
+
+        @include mobile {
+            gap: 3.2rem;
+            padding-left: 5rem;
+        }
+
+        & li {
+            list-style: disc;
+            list-style-position: outside;
+
+            &::marker {
+                color: $black16;
+            }
+        }
+    }
+
+    &-download {
+        width: fit-content;
+        padding-right: 2rem;
+        background-image: url(../assets/images/icons/download.svg);
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: contain;
+        opacity: .5;
+        transition: opacity .5s linear;
+
+        @include hover {
+            opacity: 1;
+        }
+
+        @include mobile {
+            padding-right: 4rem;
+        }
+    }
+}

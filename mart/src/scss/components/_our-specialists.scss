@@ -1,0 +1,147 @@
+.our-specialists {
+
+
+    @include mobile {
+        padding-bottom: 0;
+    }
+
+    & .container {
+        position: relative;
+        &.swiper{
+            overflow: visible;
+        }
+
+
+        @include mobile {
+            max-height: 100%;
+            padding-left: 0;
+            padding-right: 0;
+
+        }
+
+
+        & .ui-line {
+            position: absolute;
+            @include desktop{
+                top: 42%;
+            }
+
+            @include mobile {
+                bottom: 2rem;
+            }
+        }
+
+        & .swiper-nav {
+            position: absolute;
+            z-index: 3;
+            bottom: 0;
+            left: 16.5%;
+
+            @include mobile {
+                left: 5%;
+                bottom: 3rem;
+            }
+        }
+
+
+    }
+
+    &__top {
+        position: absolute;
+        z-index: 4;
+        top: 20%;
+        left: 26rem;
+        width: 100%;
+
+
+        @include mobile {
+            position: unset;
+            top: 0;
+            left: 0;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            box-sizing: border-box;
+            margin-bottom: 4rem;
+        }
+
+        & .btn-primary {
+            transform: translate(-6rem, 3rem);
+
+            @include mobile {
+                position: absolute;
+                z-index: 5;
+                top: 83%;
+                right: 20%;
+            }
+        }
+
+    }
+
+
+    &__slide {
+        width: 100%;
+        display: grid;
+        grid-template-columns: .3fr .8fr 1fr;
+        grid-template-rows: 100%;
+        grid-template-areas: ' small info big';
+        align-items: flex-end;
+
+        @include mobile {
+            grid-template-columns: 100%;
+            grid-template-rows: 37dvh 20dvh 10rem;
+            grid-template-areas:
+                'big'
+                'info'
+                '.';
+            gap: 0;
+
+        }
+
+
+
+
+        &-info {
+            background-color: $white;
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+            padding: 4.4rem;
+            height: 40%;
+            grid-area: info;
+
+            @include mobile {
+                height: 100%;
+            }
+        }
+
+        &-big {
+            display: flex;
+            height: 90%;
+            grid-area: big;
+
+            @include mobile {
+                height: 100%;
+            }
+
+            & img {
+
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &-small {
+            display: flex;
+            height: 45%;
+            grid-area: small;
+
+            & img {
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+    }
+
+
+}

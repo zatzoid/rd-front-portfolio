@@ -1,0 +1,104 @@
+.results {
+    &__c {
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+        gap: 4.4rem;
+
+        @include mobile {
+            grid-template-columns: 100%;
+            grid-template-rows: 50% 50%;
+            height: 100%;
+            /*  display: flex;
+            flex-direction: column; */
+            gap: 5rem;
+
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4.4rem;
+
+            @include mobile {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2.2rem;
+
+
+
+                & .swiper-navigation {
+                    justify-self: flex-end;
+                }
+            }
+
+            &-head {
+                @include mobile {
+                    grid-column: 1 / span 2;
+                    font-size: 5.3rem;
+                }
+            }
+
+            &-subhead {
+                @include mobile {
+                    grid-column: 1 / span 2;
+                }
+            }
+
+            & .btn-second {
+                margin-top: 4rem;
+            }
+
+            & .swiper-navigation {
+                margin-top: auto;
+            }
+        }
+
+        &-sliders {
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+            &-text {
+                position: absolute;
+                left: 50%;
+                top: 5rem;
+                width: fit-content;
+                transform: translateX(calc(-100% - 5rem));
+                z-index: 3;
+
+                &:last-of-type {
+                    left: 100%;
+                }
+            }
+
+
+            @include mobile {
+                height: 60rem;
+
+            }
+
+            &-el {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 4.4rem;
+
+                @include mobile {
+                    gap: 2rem;
+                }
+
+                &-img {
+                    display: flex;
+                    height: 100%;
+                    width: 100%;
+
+                    & img {
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+
+
+        }
+    }
+}

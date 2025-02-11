@@ -1,0 +1,81 @@
+@mixin pseudo() {
+  content: '';
+  position: absolute;
+  @content;
+}
+
+@mixin desktop {
+  @media (min-width: 48em) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 48em) {
+    @content;
+  }
+}
+
+@mixin small-tablet {
+  @media (max-width: 48em) {
+    @content;
+  }
+}
+
+@mixin icon-18 {
+  width: 1.8rem;
+  max-height: 1.8rem;
+  height: auto;
+  display: flex;
+  flex-shrink: 0;
+
+  @include mobile {
+
+    width: 3.6rem;
+    max-height: 3.6rem;
+  height: auto;
+
+
+  }
+
+}
+
+@mixin icon-24 {
+  width: 2.4rem;
+  max-height: 2.4rem;
+  display: flex;
+  flex-shrink: 0;
+  height: auto;
+
+
+  @include mobile {
+
+    width: 4.8rem;
+    max-height: 4.8rem;
+  height: auto;
+
+
+  }
+
+}
+
+@mixin sizes($width, $height) {
+  max-width: $width;
+  width: 100%;
+  height: $height;
+
+  @content;
+}
+
+@mixin wrap-text($lines) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  line-clamp: $lines;
+  box-orient: vertical;
+
+}

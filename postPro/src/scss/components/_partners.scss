@@ -1,0 +1,55 @@
+.partners {
+    width: 100%;
+    padding: 5rem 0;
+    & .swiper-wrapper{
+        transition-timing-function: linear;
+    }
+
+    &__list {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 3rem;
+        &:last-of-type{
+            margin-top: 6rem;
+        }
+
+        &-e {
+            height: 100%;
+            width: 15rem;
+            display: flex;
+            @include mobile{
+                width: 20rem;
+            }
+
+            & img {
+                object-fit: contain;
+                object-position: center;
+            }
+
+        }
+
+        & .marquee {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 2rem;
+            align-items: center;
+            height: 4rem;
+
+            &-item {
+                flex-shrink: 0;
+            }
+        }
+
+
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
