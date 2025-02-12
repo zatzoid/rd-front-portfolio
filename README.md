@@ -11,9 +11,9 @@
 
 ### mart
 
-[прод]()
+[прод]() пока нету
 
-[дев](https://requestdesign.github.io/mart/)
+[дев](https://zatzoid.github.io/mart)
 
 [figma](https://www.figma.com/file/zPjRIRuyxjb9N8JK9WGanl?node-id=135:818&t=XzRtYavg7A2G2Olc-1&locale=en&type=design)
 
